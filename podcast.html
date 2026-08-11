@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast | Matthew Landis</title>
+    <meta name="description" content="Listen to American Made, a student-centered history podcast by Matthew Landis that explores the questions, stories, and struggles that built a nation. Designed for classrooms, homeschooling, and family car rides.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">Matthew <span>Landis</span></a>
+            <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="school-visits.html">School Visits</a></li>
+                <li><a href="read.html">Read</a></li>
+                <li><a href="podcast.html" class="active">Podcast</a></li>
+                <li><a href="rv-tour.html">RV Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Podcast Hero Section -->
+    <section class="podcast-hero-section">
+        <div class="container">
+            <div class="podcast-hero-grid fade-in">
+                <div class="podcast-main-cover">
+                    <img src="https://substackcdn.com/image/fetch/$s_!HzN7!,w_1280,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c466961-1d08-4fdf-bfc3-2a5ba36473ac_1280x1280.png" alt="American Made Podcast Cover Art">
+                </div>
+                <div class="podcast-info-header">
+                    <span class="podcast-tagline">Student-Centered History</span>
+                    <h1 class="podcast-title-text">American Made</h1>
+                    <div class="podcast-byline">Hosted by Matt Landis</div>
+                    <p class="podcast-desc">
+                        An American history podcast that explores the stories, questions, and struggles that built a nation. Positioned for teachers, parents, and homeschool co-ops (grades 3–8), each episode features an accessible, story-driven narrative complete with editable handouts, primary sources, and interactive Blooket games.
+                    </p>
+                    
+                    <!-- Platform Badges -->
+                    <div class="podcast-platform-badges">
+                        <a href="https://podcasts.apple.com/us/podcast/american-made/id1853084937" class="badge-btn apple" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.04 15.35c-.17 0-.35-.04-.52-.13l-3.23-1.62c-.41-.21-.57-.7-.37-1.12.2-.41.7-.58 1.12-.37l3.23 1.62c.41.21.57.7.37 1.12-.14.29-.44.5-.72.5zm4.84-2.88c-.14 0-.29-.03-.43-.1l-5.63-2.81c-.42-.21-.59-.72-.38-1.14.21-.42.72-.59 1.14-.38l5.63 2.81c.42.21.59.72.38 1.14-.15.29-.45.48-.71.48zm1.28-3.05c-.11 0-.21-.02-.32-.06l-7.79-2.92c-.43-.16-.65-.63-.49-1.07.16-.43.63-.65 1.07-.49l7.79 2.92c.43.16.65.63.49 1.07-.13.36-.48.56-.75.56z"/>
+                            </svg>
+                            Apple Podcasts
+                        </a>
+                        <a href="https://open.spotify.com/show/7LPceJTYXAHUzMdbyXh0LK" class="badge-btn spotify" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.894-.98-.336.075-.668-.135-.744-.47-.077-.337.135-.668.47-.743 3.856-.88 7.15-.51 9.822 1.13.295.178.387.563.206.86zm1.225-2.72c-.227.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.075-1.183-.413.125-.85-.107-.975-.52-.125-.413.107-.85.52-.975 3.66-1.11 8.225-.573 11.345 1.345.367.228.487.707.26 1.074zm.105-2.822c-3.264-1.938-8.644-2.118-11.758-1.173-.5.152-1.025-.13-1.177-.63-.153-.5.13-1.026.63-1.178 3.585-1.087 9.53-.878 13.29 1.353.45.267.6.848.333 1.298-.267.45-.848.6-1.298.33z"/>
+                            </svg>
+                            Spotify
+                        </a>
+                        <a href="https://authorlandis.substack.com" class="badge-btn substack" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.539 0H1.46v2.836h21.08V0z"/>
+                            </svg>
+                            Substack Feed
+                        </a>
+                        <a href="https://authorlandis.substack.com/feed" class="badge-btn rss" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="6.18" cy="17.82" r="2.18"/>
+                                <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+                            </svg>
+                            RSS Feed
+                        </a>
+                    </div>
+
+                    <!-- Substack Subscription Box -->
+                    <div class="podcast-subscribe-bar">
+                        <div class="podcast-subscribe-bar-content">
+                            <h4>Subscribe on Substack</h4>
+                            <p>Get new episodes, worksheets, and classroom activities directly in your inbox.</p>
+                        </div>
+                        <form class="podcast-subscribe-form" action="https://authorlandis.substack.com/subscribe" method="GET" target="_blank">
+                            <input type="email" name="email" class="podcast-subscribe-input" placeholder="Your email address..." required aria-label="Email address">
+                            <button type="submit" class="podcast-subscribe-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Feed Section -->
+    <section class="podcast-feed-section">
+        <div class="container">
+            <h2 class="podcast-feed-title">Latest Episodes</h2>
+            
+            <div class="podcast-episodes-container">
+
+                <!-- Episode 12: July 4th FINALE! -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!l1sD!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F57039ad4-d81e-4e28-89ab-72199ab2d719_976x976.png" alt="July 4th FINALE! cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode July 4th FINALE!" 
+                                        data-audio="https://api.substack.com/feed/podcast/204297996/130a6798573aa04d9c8d568b0d037335.mp3"
+                                        data-title="July 4th FINALE!"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!l1sD!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F57039ad4-d81e-4e28-89ab-72199ab2d719_976x976.png">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 12</span>
+                                <span class="episode-dot"></span>
+                                <span>Jul 01, 2026</span>
+                                <span class="episode-dot"></span>
+                                <span>12 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/july-4th-finale" target="_blank" class="episode-title-link">
+                                <h3>July 4th FINALE!</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                Myth busting America's Big Day! In this Declaration series finale (Crimes of the King, 1776), we bust 5 MYTHS about America's big day. Grab your soda, chips, and burger as we dive into the most important breakup in history!
+                            </p>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/204297996/130a6798573aa04d9c8d568b0d037335.mp3"
+                                        data-title="July 4th FINALE!"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!l1sD!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F57039ad4-d81e-4e28-89ab-72199ab2d719_976x976.png">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep1">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Expandable Resources Drawer -->
+                    <div class="resource-drawer" id="resources-ep1">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📚</div>
+                                        <h5>Primary Sources</h5>
+                                        <p>Read John Adams' actual letter to Abigail predicting the fame of July 2nd, and Pauline Maier's scripture study.</p>
+                                        <a href="https://www.gilderlehrman.org/declaration-independence/annotated/grievances" target="_blank" class="resource-box-link">Grievances</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🧠</div>
+                                        <h5>Dig Deeper</h5>
+                                        <p>Explore Gilder Lehrman's database to bust all 10 myths regarding the drafting of the Declaration.</p>
+                                        <a href="https://allthingsliberty.com/2014/07/10-myths-for-the-fourth-of-july/" target="_blank" class="resource-box-link">10 July 4th Myths</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 11: Crimes of the King: The Final Five -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!oY9n!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e983c07-6083-4fed-a221-6409055a717b_2500x2500.jpeg" alt="Crimes of the King: The Final Five cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode" 
+                                        data-audio="https://api.substack.com/feed/podcast/199336655/b28434f055cf36bc80fdbf88e3ca302b.mp3"
+                                        data-title="Crimes of the King: The Final Five (#23-27)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!oY9n!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e983c07-6083-4fed-a221-6409055a717b_2500x2500.jpeg">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 11</span>
+                                <span class="episode-dot"></span>
+                                <span>May 27, 2026</span>
+                                <span class="episode-dot"></span>
+                                <span>14 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/crimes-of-the-king-the-final-five" target="_blank" class="episode-title-link">
+                                <h3>Crimes of the King: The Final Five (#23-27)</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                Why did the American colonies actually break up with King George? We wrap up our Declaration series by breaking down the final five grievances listed in the Declaration of Independence. Perfect for classrooms and family car rides!
+                            </p>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/199336655/b28434f055cf36bc80fdbf88e3ca302b.mp3"
+                                        data-title="Crimes of the King: The Final Five (#23-27)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!oY9n!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e983c07-6083-4fed-a221-6409055a717b_2500x2500.jpeg">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep2">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-drawer" id="resources-ep2">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📚</div>
+                                        <h5>Primary Sources</h5>
+                                        <p>Examine the final charges brought against the King, focusing on instigating violence and trade blockades.</p>
+                                        <a href="https://www.gilderlehrman.org/declaration-independence/annotated/grievances" target="_blank" class="resource-box-link">Annotated copy</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 10: Crimes of the King: Fake Laws -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!oY9n!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e983c07-6083-4fed-a221-6409055a717b_2500x2500.jpeg" alt="Crimes of the King: Fake Laws cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode" 
+                                        data-audio="https://api.substack.com/feed/podcast/194963371/efddfc85233e8ee08c5aabba5de5b845.mp3"
+                                        data-title="Crimes of the King: Fake Laws (#13-22)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!oY9n!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e983c07-6083-4fed-a221-6409055a717b_2500x2500.jpeg">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 10</span>
+                                <span class="episode-dot"></span>
+                                <span>Apr 29, 2026</span>
+                                <span class="episode-dot"></span>
+                                <span>15 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/crimes-of-the-king-fake-laws-13-22" target="_blank" class="episode-title-link">
+                                <h3>Crimes of the King: Fake Laws (#13-22)</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                Why did the American colonies actually break up with King George? In this episode, we explore grievances 13 through 22, focusing on the "fake laws" (like the Intolerable Acts) imposed by the Crown without representation.
+                            </p>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/194963371/efddfc85233e8ee08c5aabba5de5b845.mp3"
+                                        data-title="Crimes of the King: Fake Laws (#13-22)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!oY9n!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8e983c07-6083-4fed-a221-6409055a717b_2500x2500.jpeg">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep3">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-drawer" id="resources-ep3">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🎮</div>
+                                        <h5>Interactive App</h5>
+                                        <p>Students can play with the web-app game themed around breaking down the "fake laws" of 1776.</p>
+                                        <a href="https://1776-e81.vercel.app/" target="_blank" class="resource-box-link">Play App</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📚</div>
+                                        <h5>Primary Sources</h5>
+                                        <p>Analyze how the King dissolved colonial governments and combined with parliament to pass mock trials.</p>
+                                        <a href="https://www.gilderlehrman.org/declaration-independence/annotated/grievances" target="_blank" class="resource-box-link">Grievance breakdown</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 9: Crimes of the King: Redcoat Thugs -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!Xz-E!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7c5180bb-ea4c-40d6-a738-3c0a45cff293_1400x1400.png" alt="Crimes of the King: Redcoat Thugs cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode" 
+                                        data-audio="https://api.substack.com/feed/podcast/189810725/40e1b37d6a28c04ca22178bff3cc863f.mp3"
+                                        data-title="Crimes of the King: Redcoat Thugs (#11-12)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!Xz-E!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7c5180bb-ea4c-40d6-a738-3c0a45cff293_1400x1400.png">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 9</span>
+                                <span class="episode-dot"></span>
+                                <span>Mar 08, 2026</span>
+                                <span class="episode-dot"></span>
+                                <span>13 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/crimes-of-the-king-redcoat-thugs" target="_blank" class="episode-title-link">
+                                <h3>Crimes of the King: Redcoat Thugs (#11-12)</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                Why did the American colonies break up with King George? We look at grievances 11 and 12, covering the Quartering Acts and how the Crown kept standing armies in cities during times of peace.
+                            </p>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/189810725/40e1b37d6a28c04ca22178bff3cc863f.mp3"
+                                        data-title="Crimes of the King: Redcoat Thugs (#11-12)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!Xz-E!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7c5180bb-ea4c-40d6-a738-3c0a45cff293_1400x1400.png">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep4">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-drawer" id="resources-ep4">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🎮</div>
+                                        <h5>Interactive App</h5>
+                                        <p>Explore redcoat occupation through an interactive student-focused simulation game.</p>
+                                        <a href="https://1776-redcoats.vercel.app/" target="_blank" class="resource-box-link">Launch Game</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📚</div>
+                                        <h5>Primary Sources</h5>
+                                        <p>Gilder Lehrman's annotated copy of standing army and quartering grievances.</p>
+                                        <a href="https://www.gilderlehrman.org/declaration-independence/annotated/grievances" target="_blank" class="resource-box-link">Grievance Info</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🧠</div>
+                                        <h5>Dig Deeper</h5>
+                                        <p>Learn about the Boston Massacre Trials, defense attorney John Adams, and what actually occurred in Boston.</p>
+                                        <a href="https://www.masshist.org/features/massacre/trials" target="_blank" class="resource-box-link">Massacre Trials</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 8: 1776: A War for Freedom? -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!LZ8a!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F43fe57dd-2b2d-4894-94a2-c07ee60a7715_1400x1400.png" alt="1776: A War for Freedom? cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode" 
+                                        data-audio="https://api.substack.com/feed/podcast/188569818/7d63064d575de001a5f903310a203bcb.mp3"
+                                        data-title="1776: A War for Freedom?"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!LZ8a!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F43fe57dd-2b2d-4894-94a2-c07ee60a7715_1400x1400.png">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 8</span>
+                                <span class="episode-dot"></span>
+                                <span>Feb 22, 2026</span>
+                                <span class="episode-dot"></span>
+                                <span>16 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/1776-a-war-for-freedom" target="_blank" class="episode-title-link">
+                                <h3>1776: A War for Freedom?</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                Black History Month Special: Who actually offered more freedom to enslaved Black colonists: England or America? Exploring the complex choices faced by Black Patriots (like Peter Salem) and Black Loyalists (like Boston King).
+                            </p>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/188569818/7d63064d575de001a5f903310a203bcb.mp3"
+                                        data-title="1776: A War for Freedom?"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!LZ8a!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F43fe57dd-2b2d-4894-94a2-c07ee60a7715_1400x1400.png">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep5">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-drawer" id="resources-ep5">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🎮</div>
+                                        <h5>Interactive App</h5>
+                                        <p>Students take interactive quizzes on the history of Black Patriots and Loyalists in search of freedom.</p>
+                                        <a href="https://bhm-podcast.vercel.app/" target="_blank" class="resource-box-link">Play Game</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📚</div>
+                                        <h5>Primary Sources</h5>
+                                        <p>Read the memoir of Black Loyalist Boston King and historical profiles of Peter Salem and Elizabeth Freeman.</p>
+                                        <a href="https://www.ebsco.com/research-starters/biography/boston-king" target="_blank" class="resource-box-link">Boston King Bio</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🧠</div>
+                                        <h5>Dig Deeper</h5>
+                                        <p>Gilder Lehrman essay detailing the roles and experiences of African Americans in the Revolutionary War.</p>
+                                        <a href="https://www.gilderlehrman.org/history-resources/essays/african-americans-revolutionary-war" target="_blank" class="resource-box-link">Revolutionary War Info</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 7: Crimes of the King: Presidents Day! -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!mHHR!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F63facfff-1ef8-478e-8030-c2aff9a99fb4_2500x2500.jpeg" alt="Crimes of the King: Presidents Day! cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode" 
+                                        data-audio="https://api.substack.com/feed/podcast/187434861/f9980f4efbefa5ccfabfba28738596a9.mp3"
+                                        data-title="Crimes of the King: Presidents Day!"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!mHHR!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F63facfff-1ef8-478e-8030-c2aff9a99fb4_2500x2500.jpeg">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 7</span>
+                                <span class="episode-dot"></span>
+                                <span>Feb 10, 2026</span>
+                                <span class="episode-dot"></span>
+                                <span>14 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/crimes-of-the-king-presidents-day" target="_blank" class="episode-title-link">
+                                <h3>Crimes of the King: Presidents Day!</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                Did George Washington repeat King George's crimes when he became president? We explore the Whiskey Rebellion, the power of taxes, and the constitutional checks on the American presidency.
+                            </p>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/187434861/f9980f4efbefa5ccfabfba28738596a9.mp3"
+                                        data-title="Crimes of the King: Presidents Day!"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!mHHR!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F63facfff-1ef8-478e-8030-c2aff9a99fb4_2500x2500.jpeg">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep6">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-drawer" id="resources-ep6">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📝</div>
+                                        <h5>Activity Handouts</h5>
+                                        <p>Download the student graphic novel handout detailing the Whiskey Rebellion and comparing GW to the King.</p>
+                                        <a href="https://drive.google.com/drive/folders/1sDSRPgaoxAuZrgCL-L9iQtpFf7F83S_M?usp=sharing" target="_blank" class="resource-box-link">Google Docs Folder</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🎮</div>
+                                        <h5>Blooket Games</h5>
+                                        <p>Play a fun interactive class quiz or study individually on Washington's early presidency.</p>
+                                        <a href="https://play.blooket.com/play?hwId=698a3ffd8b288220dd7c61a4" target="_blank" class="resource-box-link">Solo Challenge</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📚</div>
+                                        <h5>Primary Sources</h5>
+                                        <p>Examine the US Constitution and the layout of presidential powers vs. royal grievances.</p>
+                                        <a href="https://constitutioncenter.org/the-constitution" target="_blank" class="resource-box-link">The Constitution</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🧠</div>
+                                        <h5>Dig Deeper</h5>
+                                        <p>Explore Mount Vernon's historical essays uncovering the real myths and history behind President's Day.</p>
+                                        <a href="https://www.mountvernon.org/george-washington/facts/the-truth-about-presidents-day" target="_blank" class="resource-box-link">Presidents Day History</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 6: Crimes of the King: No Justice -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!phyq!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8361ef8e-2f66-4b0e-863c-16f08e399300_2500x2500.png" alt="Crimes of the King: No Justice cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode" 
+                                        data-audio="https://api.substack.com/feed/podcast/186360105/3622de4ac5db24df37c0e6865abe69a8.mp3"
+                                        data-title="Crimes of the King: No Justice (#7-10)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!phyq!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8361ef8e-2f66-4b0e-863c-16f08e399300_2500x2500.png">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 6</span>
+                                <span class="episode-dot"></span>
+                                <span>Feb 01, 2026</span>
+                                <span class="episode-dot"></span>
+                                <span>15 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/crimes-of-the-king-no-justice-7-10" target="_blank" class="episode-title-link">
+                                <h3>Crimes of the King: No Justice (#7-10)</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                Why did America break up with England? Exploring crimes 7-10 of King George, covering the obstruction of justice, making judges dependent on the Crown, and refusing colonial self-governance.
+                            </p>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/186360105/3622de4ac5db24df37c0e6865abe69a8.mp3"
+                                        data-title="Crimes of the King: No Justice (#7-10)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!phyq!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8361ef8e-2f66-4b0e-863c-16f08e399300_2500x2500.png">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep7">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-drawer" id="resources-ep7">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📝</div>
+                                        <h5>Activity Handouts</h5>
+                                        <p>Word search, crossword puzzle, and grievances 7-10 explained in plain-English for kids.</p>
+                                        <a href="https://drive.google.com/drive/folders/1sDSRPgaoxAuZrgCL-L9iQtpFf7F83S_M?usp=sharing" target="_blank" class="resource-box-link">Google Docs Folder</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🎮</div>
+                                        <h5>Blooket Games</h5>
+                                        <p>Review the episode content individually or host a live classroom session with this custom Blooket.</p>
+                                        <a href="https://play.blooket.com/play?hwId=697e06fc412d989b2c88f1c6" target="_blank" class="resource-box-link">Play Solo Mode</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📚</div>
+                                        <h5>Primary Sources</h5>
+                                        <p>Review the National Constitution Center's annotated breakdown of the colonial Declaration.</p>
+                                        <a href="https://constitutioncenter.org/declaration/annotated-declaration" target="_blank" class="resource-box-link">NCC Annotation</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🧠</div>
+                                        <h5>Dig Deeper</h5>
+                                        <p>The Smithsonian Magazine article on the tarring, feathering, and infamous trials of Custom Officer John Malcolm.</p>
+                                        <a href="https://www.smithsonianmag.com/history/the-worst-parade-to-ever-hit-the-streets-of-boston-12934258/" target="_blank" class="resource-box-link">Malcolm Story</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 5: Crimes of the King: Muzzling the People -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!phyq!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8361ef8e-2f66-4b0e-863c-16f08e399300_2500x2500.png" alt="Crimes of the King: Muzzling the People cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode" 
+                                        data-audio="https://api.substack.com/feed/podcast/184724671/1d5e9ce82739dffbd90a5aa8a251bff8.mp3"
+                                        data-title="Crimes of the King: Muzzling the People (#3-6)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!phyq!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8361ef8e-2f66-4b0e-863c-16f08e399300_2500x2500.png">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 5</span>
+                                <span class="episode-dot"></span>
+                                <span>Jan 18, 2026</span>
+                                <span class="episode-dot"></span>
+                                <span>14 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/crimes-of-the-king-muzzling-the-people" target="_blank" class="episode-title-link">
+                                <h3>Crimes of the King: Muzzling the People (#3-6)</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                Why did the American colonies break up with England? We explore grievances 3-6 of King George, looking at how the Crown suspended legislatures and dissolved local assemblies to muzzle the people.
+                            </p>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/184724671/1d5e9ce82739dffbd90a5aa8a251bff8.mp3"
+                                        data-title="Crimes of the King: Muzzling the People (#3-6)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!phyq!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8361ef8e-2f66-4b0e-863c-16f08e399300_2500x2500.png">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep8">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-drawer" id="resources-ep8">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📝</div>
+                                        <h5>Activity Handouts</h5>
+                                        <p>Activity sheet containing vocabulary builders, word search, and crossword mapping to crimes 3-6.</p>
+                                        <a href="https://drive.google.com/drive/folders/1sDSRPgaoxAuZrgCL-L9iQtpFf7F83S_M?usp=sharing" target="_blank" class="resource-box-link">Google Docs Folder</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🎮</div>
+                                        <h5>Blooket Games</h5>
+                                        <p>Test knowledge of representation issues and colonial legislature bans with this interactive game.</p>
+                                        <a href="https://play.blooket.com/play?hwId=6969992ba8a1ae9c1b260ce9" target="_blank" class="resource-box-link">Solo Player Game</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📚</div>
+                                        <h5>Primary Sources</h5>
+                                        <p>Read the original drafting and grievances from the National Constitution Center archives.</p>
+                                        <a href="https://constitutioncenter.org/declaration/annotated-declaration" target="_blank" class="resource-box-link">Annotated Decl.</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🧠</div>
+                                        <h5>Dig Deeper</h5>
+                                        <p>Explore the Gilder Lehrman essay detailing the connection between the Declaration and early women's rights.</p>
+                                        <a href="https://www.gilderlehrman.org/history-now/journals/declaration-independence-and-womens-rights" target="_blank" class="resource-box-link">Women's Rights Essay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 4: Crimes of the King: Thumbs Down -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!phyq!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8361ef8e-2f66-4b0e-863c-16f08e399300_2500x2500.png" alt="Crimes of the King: Thumbs Down cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode" 
+                                        data-audio="https://api.substack.com/feed/podcast/181278666/dffa51336fce92e38f3b2ecf095ab78e.mp3"
+                                        data-title="Crimes of the King: Thumbs Down (#1-2)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!phyq!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8361ef8e-2f66-4b0e-863c-16f08e399300_2500x2500.png">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 4</span>
+                                <span class="episode-dot"></span>
+                                <span>Jan 04, 2026</span>
+                                <span class="episode-dot"></span>
+                                <span>15 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/crimes-of-the-king-thumbs-down-1" target="_blank" class="episode-title-link">
+                                <h3>Crimes of the King: Thumbs Down (#1-2)</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                Why did the American colonies break up with England? We kick off our 'Crimes of the King' series with grievances 1 and 2, examining the king's refusal to assent to colonial laws necessary for the public good.
+                            </p>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/181278666/dffa51336fce92e38f3b2ecf095ab78e.mp3"
+                                        data-title="Crimes of the King: Thumbs Down (#1-2)"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!phyq!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8361ef8e-2f66-4b0e-863c-16f08e399300_2500x2500.png">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep9">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-drawer" id="resources-ep9">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📝</div>
+                                        <h5>Activity Handouts</h5>
+                                        <p>Grievances 1-2 parsed for middle-school comprehension with a word search and crossword.</p>
+                                        <a href="https://drive.google.com/drive/folders/1sDSRPgaoxAuZrgCL-L9iQtpFf7F83S_M?usp=sharing" target="_blank" class="resource-box-link">Google Docs Folder</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🎮</div>
+                                        <h5>Blooket Games</h5>
+                                        <p>A fast-paced review game on Royal Assent and early colonial legislature conflicts.</p>
+                                        <a href="https://play.blooket.com/play?hwId=6956b3f4e57344d839e55d19" target="_blank" class="resource-box-link">Solo Play Game</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📚</div>
+                                        <h5>Primary Sources</h5>
+                                        <p>Review the Gilder Lehrman Institute's annotated list of grievances in the Declaration of Independence.</p>
+                                        <a href="https://www.gilderlehrman.org/declaration-independence/annotated/grievances" target="_blank" class="resource-box-link">Grievance List</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🧠</div>
+                                        <h5>Dig Deeper</h5>
+                                        <p>Read an academic essay exploring the concept of self-evident truths and the legacy of Black Americans in 1776.</p>
+                                        <a href="https://www.gilderlehrman.org/history-resources/essays/self-evident-truths-black-americans-and-declaration-independence" target="_blank" class="resource-box-link">Black Americans Essay</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 3: Christmas, 1776 -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!k-HD!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F32f188e7-5b7c-492b-b037-c15217784531_2500x2500.jpeg" alt="Christmas, 1776 cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode" 
+                                        data-audio="https://api.substack.com/feed/podcast/180644531/dd95b40a8bf2701ba20c651adbfaa31e.mp3"
+                                        data-title="Christmas, 1776"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!k-HD!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F32f188e7-5b7c-492b-b037-c15217784531_2500x2500.jpeg">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 3</span>
+                                <span class="episode-dot"></span>
+                                <span>Dec 14, 2025</span>
+                                <span class="episode-dot"></span>
+                                <span>15 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/christmas-1776" target="_blank" class="episode-title-link">
+                                <h3>Christmas, 1776</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                A nation on the edge. A Christmas for the ages. Enjoy this special narrative episode about General George Washington crossing the icy Delaware River and the Battle of Trenton.
+                            </p>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/180644531/dd95b40a8bf2701ba20c651adbfaa31e.mp3"
+                                        data-title="Christmas, 1776"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!k-HD!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F32f188e7-5b7c-492b-b037-c15217784531_2500x2500.jpeg">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep10">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-drawer" id="resources-ep10">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📝</div>
+                                        <h5>Activity Handouts</h5>
+                                        <p>Google Doc containing coloring pages of the crossing, vocabulary matching, and the complete text script.</p>
+                                        <a href="https://drive.google.com/drive/folders/1bEppVSU2kNw8oi0LtfVVXkU0i5bgGmKE?usp=sharing" target="_blank" class="resource-box-link">Coloring & Story</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🎮</div>
+                                        <h5>Blooket Games</h5>
+                                        <p>A Christmas miracle Blooket reviewing Washington's retreat and the surprise attack on Trenton.</p>
+                                        <a href="https://play.blooket.com/play?hwId=6931bcfd434899854e96bd2f" target="_blank" class="resource-box-link">Solo Challenge</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🧠</div>
+                                        <h5>Dig Deeper</h5>
+                                        <p>Uncover facts and scholarly articles on the crossing from the George Washington Mount Vernon archives.</p>
+                                        <a href="https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/crossing-of-the-delaware" target="_blank" class="resource-box-link">Mount Vernon Crossing</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 2: American Santa!! -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!ufYp!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc877945b-a6a4-453f-85dc-d77b0420eefc_2500x2500.jpeg" alt="American Santa!! cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode" 
+                                        data-audio="https://api.substack.com/feed/podcast/179683650/95faa9ff8c7d1c95a746d1e03b077f13.mp3"
+                                        data-title="American Santa!!"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!ufYp!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc877945b-a6a4-453f-85dc-d77b0420eefc_2500x2500.jpeg">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 2</span>
+                                <span class="episode-dot"></span>
+                                <span>Dec 04, 2025</span>
+                                <span class="episode-dot"></span>
+                                <span>14 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/e2-american-santa" target="_blank" class="episode-title-link">
+                                <h3>American Santa!!</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                How a historical joke by Washington Irving in 1809 became the national legend of Santa Claus, later built upon by Clement Clarke Moore and illustrator Thomas Nast.
+                            </p>
+                            <div class="episode-warning" style="margin-top:-0.5rem; margin-bottom:1rem; font-size:0.8rem; color:var(--podcast-accent); font-weight:500;">
+                                ⚠️ Note: This episode contains Santa spoilers for younger students!
+                            </div>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/179683650/95faa9ff8c7d1c95a746d1e03b077f13.mp3"
+                                        data-title="American Santa!!"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!ufYp!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc877945b-a6a4-453f-85dc-d77b0420eefc_2500x2500.jpeg">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep11">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-drawer" id="resources-ep11">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📝</div>
+                                        <h5>Activity Handouts</h5>
+                                        <p>Worksheet analyzing historical sources, cartoon analysis questions, and reading guide.</p>
+                                        <a href="https://drive.google.com/drive/folders/1fFGWsbAaW0WxOuHnQtBb-pGeAHmhsHQC?usp=sharing" target="_blank" class="resource-box-link">Google Docs Folder</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🎮</div>
+                                        <h5>Blooket Games</h5>
+                                        <p>Review the evolution of Santa Claus from Saint Nicholas to modern day with this Blooket.</p>
+                                        <a href="https://play.blooket.com/play?hwId=691f7c6dc2bd6b6761ff8c9a" target="_blank" class="resource-box-link">Solo Play Mode</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📚</div>
+                                        <h5>Primary Sources</h5>
+                                        <p>Read Washington Irving's 1809 Knickerbocker History, Moore's 1823 poem, and view Thomas Nast's original Santa cartoons.</p>
+                                        <a href="https://www.metmuseum.org/art/collection/search/429261" target="_blank" class="resource-box-link">Nast 1863 Cartoon</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Episode 1: The First Thanksgiving? -->
+                <div class="episode-card fade-in">
+                    <div class="episode-card-main">
+                        <div class="episode-art-container">
+                            <img class="episode-art-img" src="https://substackcdn.com/image/fetch/$s_!HzN7!,w_400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c466961-1d08-4fdf-bfc3-2a5ba36473ac_1280x1280.png" alt="The First Thanksgiving? cover image">
+                            <div class="episode-art-overlay">
+                                <button class="play-overlay-btn" aria-label="Play episode" 
+                                        data-audio="https://api.substack.com/feed/podcast/178753783/535047100618a9a944fc668fda407479.mp3"
+                                        data-title="The First Thanksgiving?"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!HzN7!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c466961-1d08-4fdf-bfc3-2a5ba36473ac_1280x1280.png">
+                                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="episode-info">
+                            <div class="episode-meta-header">
+                                <span class="episode-badge-tag">Episode 1</span>
+                                <span class="episode-dot"></span>
+                                <span>Nov 18, 2025</span>
+                                <span class="episode-dot"></span>
+                                <span>14 mins</span>
+                            </div>
+                            <a href="https://authorlandis.substack.com/p/the-first-thanksgiving" target="_blank" class="episode-title-link">
+                                <h3>The First Thanksgiving?</h3>
+                            </a>
+                            <p class="episode-excerpt">
+                                The launch episode of American Made! What actually happened in Plymouth in 1621? And how did Sarah Josepha Hale run a 36-year campaign to convince Lincoln to make Thanksgiving a national holiday?
+                            </p>
+                            <div class="episode-action-row">
+                                <button class="episode-card-play-btn" 
+                                        data-audio="https://api.substack.com/feed/podcast/178753783/535047100618a9a944fc668fda407479.mp3"
+                                        data-title="The First Thanksgiving?"
+                                        data-thumbnail="https://substackcdn.com/image/fetch/$s_!HzN7!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c466961-1d08-4fdf-bfc3-2a5ba36473ac_1280x1280.png">
+                                    <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z"/></svg>
+                                    Listen Now
+                                </button>
+                                <button class="episode-resources-toggle" data-target="resources-ep12">
+                                    Educational Resources
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-drawer" id="resources-ep12">
+                        <div class="resource-drawer-inner">
+                            <div class="resource-drawer-content">
+                                <div class="resource-grid">
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📝</div>
+                                        <h5>Activity Handouts</h5>
+                                        <p>Activity guide, vocabulary exercises, primary document comparisons, and writing prompts for students.</p>
+                                        <a href="https://drive.google.com/drive/folders/1q_yLcJwMJhRNyofWLN9zR6DoHcQJuQKs?usp=sharing" target="_blank" class="resource-box-link">Google Docs Folder</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">🎮</div>
+                                        <h5>Blooket Games</h5>
+                                        <p>A Thanksgiving game exploring Winslow's letters, Sarah Hale's campaign, and Plymouth colony history.</p>
+                                        <a href="https://play.blooket.com/play?hwId=69175321ed0e8cc48937afd1" target="_blank" class="resource-box-link">Solo Challenge</a>
+                                    </div>
+                                    <div class="resource-box">
+                                        <div class="resource-box-icon">📚</div>
+                                        <h5>Primary Sources</h5>
+                                        <p>Read Winslow's 1621 letter in Mourt's Relation, Sarah Hale's 1863 letter to Lincoln, and other original sources.</p>
+                                        <a href="https://plimoth.org/yath/unit-4/eye-witness-account-of-the-1621-harvest-celebration" target="_blank" class="resource-box-link">Winslow's Account</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>Matthew Landis</h3>
+                <p style="max-width: 400px; margin-bottom: 1.5rem;">Middle-grade and young adult author helping readers discover that history, reading, and writing are anything but boring.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/matthew_landis/" class="social-icon" target="_blank" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+            <div class="footer-links-grid">
+                <div>
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="about.html">About & Bio</a></li>
+                        <li><a href="school-visits.html">School Visits</a></li>
+                        <li><a href="read.html">Read</a></li>
+                        <li><a href="podcast.html" class="active">Podcast</a></li>
+                        <li><a href="rv-tour.html">RV Tour</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Publisher Sites</h5>
+                    <ul>
+                        <li><a href="https://www.penguinrandomhouse.com" target="_blank">Penguin Random House</a></li>
+                        <li><a href="https://www.goodreads.com" target="_blank">Goodreads Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="copyright-year"></span> Matthew Landis. All rights reserved.</p>
+            <p>Designed with care &bull; Free from Squarespace fees</p>
+        </div>
+    </footer>
+
+    <!-- Persistent Bottom Audio Player Container -->
+    <div id="persistent-player" class="persistent-player">
+        <div class="container">
+            <div class="player-grid">
+                <!-- Track Meta -->
+                <div class="player-track-info">
+                    <img id="player-thumb" class="player-track-thumbnail" src="https://substackcdn.com/image/fetch/$s_!HzN7!,w_96,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c466961-1d08-4fdf-bfc3-2a5ba36473ac_1280x1280.png" alt="Thumbnail">
+                    <div class="player-track-meta">
+                        <div id="player-title" class="player-track-title">American Made Podcast</div>
+                        <div class="player-track-series">American Made • By Matt Landis</div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="player-controls-container">
+                    <div class="player-buttons">
+                        <!-- Skip Back 10s -->
+                        <button id="player-skip-back" class="player-btn" aria-label="Rewind 10 seconds">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8zm-1.78 8.79c-.11-.12-.17-.28-.17-.48 0-.21.06-.37.18-.49.12-.11.29-.17.5-.17.21 0 .38.06.49.17.12.11.17.27.17.49 0 .2-.05.36-.16.48-.11.12-.28.18-.5.18-.22 0-.39-.06-.51-.18zm-.12-3.13h2.64v.85h-1.63v.83h-1.49v.82h-1.49v1.23h-.86v-3.73z"/>
+                            </svg>
+                        </button>
+                        <!-- Play/Pause Toggle -->
+                        <button id="player-toggle" class="player-btn player-btn-play" aria-label="Play">
+                            <svg id="player-toggle-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <!-- Skip Forward 10s -->
+                        <button id="player-skip-forward" class="player-btn" aria-label="Fast forward 10 seconds">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 5V1l5 5-5 5V7c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6h2c0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8zm1.78 8.79c.11-.12.17-.28.17-.48 0-.21-.06-.37-.18-.49-.12-.11-.29-.17-.5-.17-.21 0-.38.06-.49.17-.12.11-.17.27-.17.49 0 .2.05.36.16.48.11.12.28.18.5.18.22 0 .39-.06.51-.18zm.12-3.13h-2.64v.85h1.63v.83h-1.49v.82h-1.49v1.23h.86v-3.73z"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Progress timeline -->
+                    <div class="player-timeline-wrapper">
+                        <span id="player-time-current" class="player-time">0:00</span>
+                        <div id="player-progress-container" class="player-progress-bar-container">
+                            <div id="player-progress-fill" class="player-progress-fill"></div>
+                            <input id="player-progress-slider" class="player-slider-input" type="range" min="0" max="100" value="0" aria-label="Scrub timeline">
+                        </div>
+                        <span id="player-time-duration" class="player-time">0:00</span>
+                    </div>
+                </div>
+
+                <!-- Utilities (Playback Speed, Volume, Close) -->
+                <div class="player-utilities">
+                    <!-- Playback Speed -->
+                    <div class="player-speed-control">
+                        <button id="player-speed-btn" class="player-speed-btn">1.0x</button>
+                        <div id="player-speed-menu" class="player-speed-menu">
+                            <button class="player-speed-option active" data-speed="1.0">1.0x</button>
+                            <button class="player-speed-option" data-speed="1.25">1.25x</button>
+                            <button class="player-speed-option" data-speed="1.5">1.5x</button>
+                            <button class="player-speed-option" data-speed="2.0">2.0x</button>
+                        </div>
+                    </div>
+
+                    <!-- Volume Control -->
+                    <div class="player-volume-container">
+                        <button id="player-volume-toggle" class="player-btn" aria-label="Mute/Unmute">
+                            <svg viewBox="0 0 24 24" id="volume-icon">
+                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                            </svg>
+                        </button>
+                        <div class="player-volume-slider-wrapper">
+                            <div id="player-volume-fill" class="player-volume-fill"></div>
+                            <input id="player-volume-slider" class="player-slider-input" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume">
+                        </div>
+                    </div>
+
+                    <!-- Close Player -->
+                    <button id="player-close" class="player-close-btn" aria-label="Close audio player">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Native Audio Node -->
+    <audio id="audio-node" preload="none"></audio>
+
+    <script src="js/main.js"></script>
+
+    <!-- Podcast Script Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ==========================================
+            // 1. EXPANDABLE DRAWERS (Resource Trays)
+            // ==========================================
+            const resourceToggles = document.querySelectorAll('.episode-resources-toggle');
+            
+            resourceToggles.forEach(toggle => {
+                toggle.addEventListener('click', (e) => {
+                    const targetId = toggle.getAttribute('data-target');
+                    const drawer = document.getElementById(targetId);
+                    
+                    if (drawer) {
+                        const isOpen = drawer.classList.contains('open');
+                        
+                        // Close other open drawers to keep clean
+                        document.querySelectorAll('.resource-drawer.open').forEach(d => {
+                            if (d.id !== targetId) {
+                                d.classList.remove('open');
+                                const correspondingToggle = document.querySelector(`[data-target="${d.id}"]`);
+                                if (correspondingToggle) correspondingToggle.classList.remove('active');
+                            }
+                        });
+                        
+                        // Toggle current drawer
+                        drawer.classList.toggle('open');
+                        toggle.classList.toggle('active');
+                    }
+                });
+            });
+
+            // ==========================================
+            // 2. STICKY AUDIO PLAYER
+            // ==========================================
+            const audio = document.getElementById('audio-node');
+            const player = document.getElementById('persistent-player');
+            const playOverlayBtns = document.querySelectorAll('.play-overlay-btn');
+            const cardPlayBtns = document.querySelectorAll('.episode-card-play-btn');
+            
+            // Bottom Player UI Elements
+            const pThumb = document.getElementById('player-thumb');
+            const pTitle = document.getElementById('player-title');
+            const pToggle = document.getElementById('player-toggle');
+            const pToggleIcon = document.getElementById('player-toggle-icon');
+            const pSkipBack = document.getElementById('player-skip-back');
+            const pSkipForward = document.getElementById('player-skip-forward');
+            const pTimeCurrent = document.getElementById('player-time-current');
+            const pTimeDuration = document.getElementById('player-time-duration');
+            const pProgressFill = document.getElementById('player-progress-fill');
+            const pProgressSlider = document.getElementById('player-progress-slider');
+            const pSpeedBtn = document.getElementById('player-speed-btn');
+            const pSpeedMenu = document.getElementById('player-speed-menu');
+            const pSpeedOptions = document.querySelectorAll('.player-speed-option');
+            const pVolumeToggle = document.getElementById('player-volume-toggle');
+            const pVolumeSlider = document.getElementById('player-volume-slider');
+            const pVolumeFill = document.getElementById('player-volume-fill');
+            const pClose = document.getElementById('player-close');
+            
+            let currentPlayingUrl = null;
+            let isMuted = false;
+            let lastVolume = 0.8;
+
+            // Formats seconds into M:SS or H:MM:SS
+            function formatTime(secs) {
+                if (isNaN(secs)) return '0:00';
+                const hours = Math.floor(secs / 3600);
+                const minutes = Math.floor((secs % 3600) / 60);
+                const seconds = Math.floor(secs % 60);
+                
+                const paddedSeconds = seconds < 10 ? '0' + seconds : seconds;
+                
+                if (hours > 0) {
+                    const paddedMinutes = minutes < 10 ? '0' + minutes : minutes;
+                    return `${hours}:${paddedMinutes}:${paddedSeconds}`;
+                }
+                return `${minutes}:${paddedSeconds}`;
+            }
+
+            // Syncs play/pause state UI on the page for buttons matching active track
+            function updateButtonsState(isPlaying) {
+                // Main player toggle state
+                if (isPlaying) {
+                    pToggle.setAttribute('aria-label', 'Pause');
+                    pToggleIcon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>'; // Pause Path
+                    pToggle.classList.add('playing');
+                } else {
+                    pToggle.setAttribute('aria-label', 'Play');
+                    pToggleIcon.innerHTML = '<path d="M8 5v14l11-7z"/>'; // Play Path
+                    pToggle.classList.remove('playing');
+                }
+
+                // Page cards play button states
+                cardPlayBtns.forEach(btn => {
+                    const url = btn.getAttribute('data-audio');
+                    const isCurrent = (url === currentPlayingUrl);
+                    
+                    if (isCurrent && isPlaying) {
+                        btn.classList.add('playing');
+                        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg> Pause';
+                    } else if (isCurrent) {
+                        btn.classList.remove('playing');
+                        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Resume';
+                    } else {
+                        btn.classList.remove('playing');
+                        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Listen Now';
+                    }
+                });
+
+                // Artwork hover buttons
+                playOverlayBtns.forEach(btn => {
+                    const url = btn.getAttribute('data-audio');
+                    const isCurrent = (url === currentPlayingUrl);
+                    
+                    if (isCurrent && isPlaying) {
+                        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+                        btn.setAttribute('aria-label', 'Pause episode');
+                    } else {
+                        btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+                        btn.setAttribute('aria-label', 'Play episode');
+                    }
+                });
+            }
+
+            // Play a track
+            function playTrack(audioUrl, title, thumbnail) {
+                if (currentPlayingUrl !== audioUrl) {
+                    // New track load
+                    audio.src = audioUrl;
+                    currentPlayingUrl = audioUrl;
+                    
+                    // Update metadata
+                    pTitle.textContent = title;
+                    pThumb.src = thumbnail;
+                    
+                    // Reset speed selector to 1.0x on load
+                    audio.playbackRate = 1.0;
+                    pSpeedBtn.textContent = '1.0x';
+                    pSpeedOptions.forEach(opt => {
+                        if (opt.getAttribute('data-speed') === '1.0') opt.classList.add('active');
+                        else opt.classList.remove('active');
+                    });
+                    
+                    audio.load();
+                }
+                
+                audio.play()
+                    .then(() => {
+                        player.classList.add('show');
+                        document.body.classList.add('player-active');
+                    })
+                    .catch(err => console.error("Error playing audio:", err));
+            }
+
+            // Click play button listener
+            function handlePlayClick(element) {
+                const audioUrl = element.getAttribute('data-audio');
+                const title = element.getAttribute('data-title');
+                const thumbnail = element.getAttribute('data-thumbnail');
+                
+                if (currentPlayingUrl === audioUrl) {
+                    if (audio.paused) {
+                        audio.play();
+                    } else {
+                        audio.pause();
+                    }
+                } else {
+                    playTrack(audioUrl, title, thumbnail);
+                }
+            }
+
+            // Attach listeners to all page play actions
+            playOverlayBtns.forEach(btn => {
+                btn.addEventListener('click', () => handlePlayClick(btn));
+            });
+
+            cardPlayBtns.forEach(btn => {
+                btn.addEventListener('click', () => handlePlayClick(btn));
+            });
+
+            // Native Audio Node Listeners
+            audio.addEventListener('play', () => {
+                updateButtonsState(true);
+            });
+
+            audio.addEventListener('pause', () => {
+                updateButtonsState(false);
+            });
+
+            audio.addEventListener('timeupdate', () => {
+                if (audio.duration) {
+                    const percentage = (audio.currentTime / audio.duration) * 100;
+                    pProgressFill.style.width = percentage + '%';
+                    pProgressSlider.value = percentage;
+                    pTimeCurrent.textContent = formatTime(audio.currentTime);
+                }
+            });
+
+            audio.addEventListener('loadedmetadata', () => {
+                pTimeDuration.textContent = formatTime(audio.duration);
+            });
+
+            audio.addEventListener('ended', () => {
+                updateButtonsState(false);
+                audio.currentTime = 0;
+            });
+
+            // Bottom Player Controls
+            pToggle.addEventListener('click', () => {
+                if (audio.src) {
+                    if (audio.paused) audio.play();
+                    else audio.pause();
+                }
+            });
+
+            pSkipBack.addEventListener('click', () => {
+                if (audio.src) {
+                    audio.currentTime = Math.max(0, audio.currentTime - 10);
+                }
+            });
+
+            pSkipForward.addEventListener('click', () => {
+                if (audio.src) {
+                    audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 10);
+                }
+            });
+
+            // Timeline scrubbing
+            pProgressSlider.addEventListener('input', (e) => {
+                if (audio.src && audio.duration) {
+                    const percentage = e.target.value;
+                    pProgressFill.style.width = percentage + '%';
+                    const time = (percentage / 100) * audio.duration;
+                    pTimeCurrent.textContent = formatTime(time);
+                }
+            });
+
+            pProgressSlider.addEventListener('change', (e) => {
+                if (audio.src && audio.duration) {
+                    const percentage = e.target.value;
+                    audio.currentTime = (percentage / 100) * audio.duration;
+                }
+            });
+
+            // Playback speed dropdown
+            pSpeedBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                pSpeedMenu.classList.toggle('show');
+            });
+
+            document.addEventListener('click', () => {
+                pSpeedMenu.classList.remove('show');
+            });
+
+            pSpeedOptions.forEach(opt => {
+                opt.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const speed = parseFloat(opt.getAttribute('data-speed'));
+                    audio.playbackRate = speed;
+                    pSpeedBtn.textContent = opt.textContent;
+                    
+                    pSpeedOptions.forEach(o => o.classList.remove('active'));
+                    opt.classList.add('active');
+                    pSpeedMenu.classList.remove('show');
+                });
+            });
+
+            // Volume control
+            function setVolume(value) {
+                audio.volume = value;
+                pVolumeSlider.value = value;
+                pVolumeFill.style.width = (value * 100) + '%';
+                
+                // Update volume icon based on level
+                const volIcon = document.getElementById('volume-icon');
+                if (value === 0) {
+                    isMuted = true;
+                    volIcon.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.21.05-.42.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>'; // Muted Path
+                } else {
+                    isMuted = false;
+                    lastVolume = value;
+                    if (value < 0.5) {
+                        volIcon.innerHTML = '<path d="M7 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>'; // Low Volume Path
+                    } else {
+                        volIcon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>'; // High Volume Path
+                    }
+                }
+            }
+
+            pVolumeSlider.addEventListener('input', (e) => {
+                setVolume(parseFloat(e.target.value));
+            });
+
+            pVolumeToggle.addEventListener('click', () => {
+                if (isMuted) {
+                    setVolume(lastVolume);
+                } else {
+                    setVolume(0);
+                }
+            });
+
+            // Close Player
+            pClose.addEventListener('click', () => {
+                audio.pause();
+                player.classList.remove('show');
+                document.body.classList.remove('player-active');
+                
+                // Clear state
+                currentPlayingUrl = null;
+                updateButtonsState(false);
+            });
+        });
+    </script>
+</body>
+</html>
