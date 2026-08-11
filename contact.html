@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Matthew Landis</title>
+    <meta name="description" content="Get in touch with author Matthew Landis to book school visits, request assemblies, or send a reader letter.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-header {
+            text-align: center;
+            padding: 8rem 0 3rem 0;
+            background: linear-gradient(180deg, rgba(19, 27, 46, 0.4) 0%, transparent 100%);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 4rem;
+            padding-bottom: 8rem;
+        }
+
+        .contact-info-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-icon {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-info-text h4 {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Guide banner */
+        .form-guide-banner {
+            background-color: rgba(212, 175, 55, 0.05);
+            border: 1px dashed var(--accent-gold);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .form-guide-banner strong {
+            color: var(--accent-gold);
+        }
+
+        /* Form Status Banner */
+        .form-status-banner {
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .form-status-banner.success {
+            background-color: rgba(46, 204, 113, 0.1);
+            border: 1px solid #2ecc71;
+            color: #2ecc71;
+        }
+
+        .form-status-banner.error {
+            background-color: rgba(231, 76, 60, 0.1);
+            border: 1px solid #e74c3c;
+            color: #e74c3c;
+        }
+
+        .status-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .status-icon {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .status-text h4 {
+            margin: 0 0 0.25rem 0;
+            color: currentColor;
+        }
+
+        .status-text p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Loading state for button */
+        .btn-loading {
+            position: relative;
+            color: transparent !important;
+            pointer-events: none;
+        }
+
+        .btn-loading::after {
+            content: "";
+            position: absolute;
+            width: 1.25rem;
+            height: 1.25rem;
+            top: 50%;
+            left: 50%;
+            margin-top: -0.625rem;
+            margin-left: -0.625rem;
+            border: 2px solid transparent;
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: button-spin 0.6s linear infinite;
+        }
+
+        @keyframes button-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">Matthew <span>Landis</span></a>
+            <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="school-visits.html">School Visits</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rv-tour.html">RV Tour</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="contact-header">
+        <div class="container fade-in">
+            <h2>Contact Matt</h2>
+            <p>HIT ME UP if you want to book a visit or share thoughts about my books. I love reading fan mail and ALWAYS respond!</p>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section style="padding-top: 0;">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Left: Contact Information -->
+                <div class="fade-in">
+
+                    <ul class="contact-info-list">
+                        <li class="contact-info-item">
+                            <div class="contact-info-icon">📧</div>
+                            <div class="contact-info-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:author.matthewlandis@gmail.com">author.matthewlandis@gmail.com</a></p>
+                            </div>
+                        </li>
+                        <li class="contact-info-item">
+                            <div class="contact-info-icon">📍</div>
+                            <div class="contact-info-text">
+                                <h4>Location</h4>
+                                <p>Doylestown, Pennsylvania, USA</p>
+                            </div>
+                        </li>
+                        <li class="contact-info-item">
+                            <div class="contact-info-icon">📸</div>
+                            <div class="contact-info-text">
+                                <h4>Instagram</h4>
+                                <p>Follow on Instagram <a href="https://www.instagram.com/matthew_landis/" target="_blank" style="color: var(--accent-gold); font-weight: 600; text-decoration: underline;">@matthew_landis</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="fade-in" style="transition-delay: 0.2s;">
+                    <!-- Form Service Guide -->
+                    <div class="form-guide-banner">
+                        📧 <strong>Form Connected to Gmail:</strong><br>
+                        This form is connected to <strong>author.matthewlandis@gmail.com</strong> via FormSubmit.co.<br>
+                        <span style="font-size: 0.85rem; display: block; margin-top: 0.5rem; opacity: 0.9;">
+                            ⚠️ <strong>First-time Setup:</strong> On the very first form submission, you will receive an activation email from FormSubmit.co. Make sure to click the activation link inside it to start receiving your emails directly.
+                        </span>
+                    </div>
+
+                    <!-- Form Status Messages -->
+                    <div id="form-status" class="form-status-banner" style="display: none; margin-bottom: 2rem;">
+                        <div class="status-content">
+                            <span class="status-icon"></span>
+                            <div class="status-text">
+                                <h4 class="status-title" style="margin: 0 0 0.25rem 0; font-size: 1.1rem; font-weight: 600;"></h4>
+                                <p class="status-desc" style="margin: 0; font-size: 0.9rem;"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form (Connected via FormSubmit.co) -->
+                    <form id="contact-form" name="contact" action="https://formsubmit.co/author.matthewlandis@gmail.com" method="POST" class="form-container" style="margin-top: 0; max-width: 100%;">
+                        <!-- Honeypot spam protection -->
+                        <input type="text" name="_honey" style="display:none">
+                        
+                        <!-- Email Subject configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission | Matthew Landis Website">
+                        
+                        <!-- FormSubmit template styling -->
+                        <input type="hidden" name="_template" value="box">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="school">School / Organization (Optional)</label>
+                            <input type="text" id="school" name="school" class="form-control" placeholder="Kennesaw Middle School">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="visit-type">Type of Request</label>
+                            <select id="visit-type" name="type" class="form-control" style="appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2523FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 0.65rem auto;">
+                                <option value="general">General Message</option>
+                                <option value="school-visit-in-person">In-Person School Visit</option>
+                                <option value="school-visit-virtual">Virtual Presentation</option>
+                                <option value="media">Media & Press Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Tell me about your event or send a note..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>Matthew Landis</h3>
+                <p style="max-width: 400px; margin-bottom: 1.5rem;">Middle-grade and young adult author helping readers discover that history, reading, and writing are anything but boring.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/matthew_landis/" class="social-icon" target="_blank" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+            <div class="footer-links-grid">
+                <div>
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="school-visits.html">School Visits</a></li>
+                        <li><a href="about.html">About & Bio</a></li>
+                        <li><a href="rv-tour.html">RV Tour</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Publisher Sites</h5>
+                    <ul>
+                        <li><a href="https://www.penguinrandomhouse.com" target="_blank">Penguin Random House</a></li>
+                        <li><a href="https://www.goodreads.com" target="_blank">Goodreads Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="copyright-year"></span> Matthew Landis. All rights reserved.</p>
+            <p>Designed with care &bull; Free from Squarespace fees</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

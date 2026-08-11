@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RV Tour | Matthew Landis - Author & Teacher</title>
+    <meta name="description" content="Relive the Great American RV Family Book Tour with author Matthew Landis. Listen to the podcast, see the map, and explore the school stops.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght=0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .rv-hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+        @media (max-width: 992px) {
+            .rv-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+        .rv-btn-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .rv-btn {
+            padding: 0.9rem 2rem;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-title);
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 190px;
+        }
+        .rv-btn-dark {
+            background-color: #1e293b;
+            color: #ffffff;
+            border: 1px solid #1e293b;
+        }
+        .rv-btn-dark:hover {
+            background-color: var(--accent-gold);
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+        .rv-btn-light {
+            background-color: #ffffff;
+            color: #1e293b;
+            border: 1px solid #cbd5e1;
+        }
+        .rv-btn-light:hover {
+            background-color: #f8fafc;
+            border-color: #1e293b;
+            transform: translateY(-2px);
+        }
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .showcase-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-premium);
+            transition: var(--transition-smooth);
+        }
+        .showcase-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .showcase-card img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            display: block;
+            border: 1px solid var(--border-color);
+        }
+        .showcase-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1.25rem;
+            color: var(--text-primary);
+            text-align: center;
+            font-family: var(--font-title);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">Matthew <span>Landis</span></a>
+            <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="school-visits.html">School Visits</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rv-tour.html" class="active">RV Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="about-header">
+        <div class="container fade-in">
+            <h2>RV Tour</h2>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section style="padding-top: 0;">
+        <div class="container">
+            
+            <!-- Video & Info Grid -->
+            <div class="rv-hero-grid fade-in">
+                <!-- Video on Left -->
+                <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-premium); border: 1px solid var(--border-color);">
+                    <iframe src="https://www.youtube-nocookie.com/embed/Qf7WJ1h-UqY" title="The Great American RV Family Book Tour Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 100%; border: none;"></iframe>
+                </div>
+                
+                <!-- Info on Right -->
+                <div style="text-align: center; padding: 1fr;">
+                    <h3 style="font-size: 2.1rem; line-height: 1.25; margin-bottom: 1.5rem; color: var(--text-primary); font-family: var(--font-title); font-weight: 800; letter-spacing: -0.01em; text-transform: uppercase;">THE TOUR IS OVER! THANK YOU SO MUCH FOR HAVING ME!</h3>
+                    <p style="font-size: 1.15rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 2rem;">Unless, of course, you were a librarian who ghosted me. Shame on you. JK LOL but seriously.</p>
+                    
+                    <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0;">
+                    
+                    <h4 style="font-size: 1.4rem; font-style: italic; font-family: var(--font-title); font-weight: 700; margin-bottom: 1.25rem; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.05em;">RELIVE THE TOUR!</h4>
+                    
+                    <div class="rv-btn-group">
+                        <a href="https://www.instagram.com/matthew_landis/" target="_blank" class="rv-btn rv-btn-dark">Instagram</a>
+                        <a href="https://podcasts.apple.com/us/podcast/the-great-american-rv-book-tour/id1773868939" target="_blank" class="rv-btn rv-btn-light">Tour Podcast</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tour Showcase Section -->
+            <div style="margin-top: 5rem;" class="fade-in">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2>Map & Visited Schools</h2>
+                </div>
+                
+                <div class="showcase-grid">
+                    <!-- Left: Tour Map -->
+                    <div class="showcase-card">
+                        <h4>RV Tour Map</h4>
+                        <img src="images/rv-tour/rv-map.png" alt="The Great American RV Family Book Tour Route Map">
+                    </div>
+                    
+                    <!-- Right: Places Visited -->
+                    <div class="showcase-card">
+                        <h4>Schools Visited</h4>
+                        <img src="images/rv-tour/rv-stops.png" alt="List of school stops visited on the RV book tour">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>Matthew Landis</h3>
+                <p style="max-width: 400px; margin-bottom: 1.5rem;">Middle-grade and young adult author helping readers discover that history, reading, and writing are anything but boring.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/matthew_landis/" class="social-icon" target="_blank" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+            <div class="footer-links-grid">
+                <div>
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="school-visits.html">School Visits</a></li>
+                        <li><a href="about.html">About & Bio</a></li>
+                        <li><a href="rv-tour.html">RV Tour</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Publisher Sites</h5>
+                    <ul>
+                        <li><a href="https://www.penguinrandomhouse.com" target="_blank">Penguin Random House</a></li>
+                        <li><a href="https://www.goodreads.com" target="_blank">Goodreads Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="copyright-year"></span> Matthew Landis. All rights reserved.</p>
+            <p>Designed with care &bull; Free from Squarespace fees</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

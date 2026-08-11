@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Visits | Matthew Landis</title>
+    <meta name="description" content="Book Matthew Landis for dynamic, engaging author visits, assemblies, and writing workshops. Explore packages, pricing, and booking details.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .visits-header {
+            text-align: center;
+            padding: 8rem 0 3rem 0;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.03) 0%, transparent 100%);
+        }
+
+        .visits-container {
+            padding-bottom: 8rem;
+        }
+
+        /* Pricing Grid */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .pricing-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-premium);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(220, 38, 38, 0.3);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pricing-title {
+            font-family: var(--font-title);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-price {
+            font-family: var(--font-title);
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+            text-align: left;
+            padding: 0 0.5rem;
+        }
+
+        .pricing-features li {
+            margin-bottom: 0.85rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            line-height: 1.4;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--accent-gold);
+            font-weight: 800;
+            font-size: 1rem;
+            flex-shrink: 0;
+            line-height: 1.2;
+        }
+
+        .travel-info {
+            background-color: rgba(220, 38, 38, 0.03);
+            border: 1px dashed var(--accent-gold);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        /* Included Amenities Grid */
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .included-item {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .included-item h4 {
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .included-item p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+            color: var(--text-secondary);
+        }
+
+        .program-tag {
+            background-color: rgba(220, 38, 38, 0.08);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .testimonial-block {
+            border-left: 3px solid var(--accent-gold);
+            padding: 1.5rem 0 1.5rem 2rem;
+            margin: 4rem 0;
+            background-color: var(--bg-secondary);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        .testimonial-block p {
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-block cite {
+            font-family: var(--font-title);
+            font-weight: 600;
+            font-style: normal;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">Matthew <span>Landis</span></a>
+            <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="school-visits.html" class="active">School Visits</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rv-tour.html">RV Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="visits-header">
+        <div class="container fade-in">
+            <h2>School Visits</h2>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="visits-container" style="padding-top: 0;">
+        <div class="container">
+            
+            <!-- Intro Hero / Action Photo Anchor -->
+            <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 4rem; align-items: center; margin-bottom: 2rem;" class="fade-in">
+                <div style="display: flex; justify-content: center;">
+                    <img src="images/author/schoolvisit_1.png" alt="Matthew Landis School Visit Action Photo" style="width: 100%; max-width: 480px; border-radius: var(--radius-md); box-shadow: var(--shadow-premium); border: 1px solid var(--border-color); object-fit: cover;">
+                </div>
+                <div>
+                    <span class="program-tag" style="margin-bottom: 1rem;">Live Assemblies & Workshops</span>
+                    <h3 style="font-size: 2.25rem; line-height: 1.25; margin-bottom: 1.25rem; color: var(--text-primary);">My goal: be the most engaging guest speaker you've ever had.</h3>
+                    <p style="font-size: 1.15rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 2rem;">As a full-time teacher, I know boring=bad. A day with me is high-octane fun, full of joy, prizes, and a celebration of storytelling that kids will be talking about till the last day of school.</p>
+                    <a href="contact.html" class="btn btn-primary">Book a Visit Date</a>
+                </div>
+            </div>
+
+            <!-- Educator Quote Spotlight Banner -->
+            <div class="quote-spotlight-banner fade-in" style="margin: 2rem 0 3.5rem 0; padding: 2.5rem 3rem; background: var(--bg-secondary); border: 1px solid var(--border-color); border-left: 5px solid var(--accent-gold); border-radius: 0 var(--radius-md) var(--radius-md) 0; box-shadow: var(--shadow-premium);">
+                <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-gold); margin-bottom: 1.25rem; font-family: var(--font-title);">★ What Educators Are Saying</div>
+                <div class="quote-slides-container">
+                    <div class="quote-slide active">
+                        <p style="font-size: 1.35rem; font-style: italic; color: var(--text-primary); margin-bottom: 0.85rem; line-height: 1.6;">"Matt’s assembly was one of the best I’ve seen in my 20+ year career."</p>
+                        <cite style="font-family: var(--font-title); font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); font-style: normal;">— Lori Bennett, Librarian | O'Rourke MS, NY</cite>
+                    </div>
+                    <div class="quote-slide">
+                        <p style="font-size: 1.35rem; font-style: italic; color: var(--text-primary); margin-bottom: 0.85rem; line-height: 1.6;">"One of, if not the best author visit I’ve ever been involved with."</p>
+                        <cite style="font-family: var(--font-title); font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); font-style: normal;">— Lindsay Armbruster, Librarian | Burnt Hills-Balston Lake MS, NY</cite>
+                    </div>
+                    <div class="quote-slide">
+                        <p style="font-size: 1.35rem; font-style: italic; color: var(--text-primary); margin-bottom: 0.85rem; line-height: 1.6;">"The kids were still talking about you on the last day of school."</p>
+                        <cite style="font-family: var(--font-title); font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); font-style: normal;">— Wally Popejoy, Principal | Palmyra Area MS, PA</cite>
+                    </div>
+                    <div class="quote-slide">
+                        <p style="font-size: 1.35rem; font-style: italic; color: var(--text-primary); margin-bottom: 0.85rem; line-height: 1.6;">"What stood out most was Matt’s unique ability to captivate students with his powerful message while simultaneously keeping staff entertained and inspired."</p>
+                        <cite style="font-family: var(--font-title); font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); font-style: normal;">— Bret Applequist, Principal | Northside ES, PA</cite>
+                    </div>
+                    <div class="quote-slide">
+                        <p style="font-size: 1.35rem; font-style: italic; color: var(--text-primary); margin-bottom: 0.85rem; line-height: 1.6;">"The entire experience—from the group presentation to the scavenger hunt and the writing workshop—was clearly well-designed and highly engaging for students."</p>
+                        <cite style="font-family: var(--font-title); font-size: 1.05rem; font-weight: 600; color: var(--text-secondary); font-style: normal;">— Melissa Livoti, ELA Teacher | Montgomery Lower MS, NJ</cite>
+                    </div>
+                </div>
+                
+                <!-- Quote Controls -->
+                <div class="quote-controls" style="display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem; margin-top: 0.75rem;">
+                    <button class="quote-prev" aria-label="Previous quote" style="background: var(--bg-card); border: 1px solid var(--border-color); width: 36px; height: 36px; border-radius: 50%; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; justify-content: center; font-size: 0.95rem;">&#10094;</button>
+                    <button class="quote-next" aria-label="Next quote" style="background: var(--bg-card); border: 1px solid var(--border-color); width: 36px; height: 36px; border-radius: 50%; cursor: pointer; color: var(--text-primary); display: flex; align-items: center; justify-content: center; font-size: 0.95rem;">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Presentation Offerings -->
+            <div style="text-align: center; margin-top: 1rem; margin-bottom: 2rem;" class="fade-in">
+                <h2>What happens at a school visit?</h2>
+            </div>
+
+            <!-- Video Embed Showcase -->
+            <div style="position: relative; width: 100%; max-width: 800px; margin: 0 auto 4rem auto; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-premium); border: 1px solid var(--border-color);" class="fade-in">
+                <iframe src="https://www.youtube-nocookie.com/embed/4QQkNLX-N00" title="What Happens at a Matthew Landis School Visit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+
+            <div class="grid-3">
+                <!-- Program 1 -->
+                <div class="card fade-in" style="transition-delay: 0.1s;">
+                    <span class="program-tag">Big Assembly</span>
+                    <h3 style="margin-bottom: 0.25rem;">The Big Assembly</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-bottom: 1rem;">Duration: 40–50 minutes</p>
+                    <p>A high-energy, fast-paced session for combined grades. Matthew shares his writing journey, discusses the necessity of failure, and pulls students onstage for live history stunts, puzzles, and brain challenges based on the <em>National Archive Hunters</em> series. Prizes include signed books and an American flag cape!</p>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="card fade-in" style="transition-delay: 0.2s;">
+                    <span class="program-tag">Interactive Game</span>
+                    <h3 style="margin-bottom: 0.25rem;">Live Scavenger Hunt</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-bottom: 1rem;">Duration: 40–50 minutes</p>
+                    <p>Perfect for groups of up to 150 students. Working in small team tables, students solve a series of historical puzzles, map challenges, and book trivia directly tied to <em>National Archive Hunters: Eternal Flame</em>. High-energy, collaborative, and fast-paced.</p>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="card fade-in" style="transition-delay: 0.3s;">
+                    <span class="program-tag">Classroom Workshop</span>
+                    <h3 style="margin-bottom: 0.25rem;">Writers' Workshops</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-bottom: 1rem;">Duration: 40–50 minutes</p>
+                    <p>Designed for individual classroom sizes. Matthew works directly with students on specific writing skills, teaching them actionable techniques to "Write Not-Boring Stories." Students practice building compelling hooks, writing realistic dialogue, and editing.</p>
+                </div>
+            </div>
+
+            <!-- What's Included in All Visits -->
+            <div style="margin-top: 8rem;" class="fade-in">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2>What's Included</h2>
+                </div>
+
+                <div class="included-grid">
+                    <div class="included-item">
+                        <h4>Promo Video</h4>
+                        <p>High-energy video to get students excited before the visit.</p>
+                        <p style="margin-top: 0.35rem; margin-bottom: 0;"><a href="https://www.youtube.com/watch?v=fnsaBPkwm0c" target="_blank" style="color: var(--accent-gold); font-weight: 600; text-decoration: underline;">Check one out!</a></p>
+                    </div>
+                    <div class="included-item">
+                        <h4>Flyers & Book Forms</h4>
+                        <p>Flyer and custom book order forms for parents - all online, no cash!</p>
+                    </div>
+                    <div class="included-item">
+                        <h4>Books!</h4>
+                        <p>Discount orders shipped right to your school from the publisher, signed live by me!</p>
+                    </div>
+                    <div class="included-item">
+                        <h4>Prizes!</h4>
+                        <p>Kids love free stuff, so I bring the goods. Including free books!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div style="margin-top: 8rem;" class="fade-in">
+                <div style="text-align: center;">
+                    <h2>Rates & Packages</h2>
+                    <p>Flat-rate fees for various school visit types.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Package 1 -->
+                    <div class="pricing-card">
+                        <div class="pricing-title">Virtual Visit</div>
+                        <div class="pricing-price">$250</div>
+                        <ul class="pricing-features">
+                            <li>60 minute Zoom session</li>
+                            <li>Q&A with individual classes</li>
+                            <li>Book giveaway!</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary">Book Virtual</a>
+                    </div>
+
+                    <!-- Package 2 -->
+                    <div class="pricing-card" style="border-color: rgba(220, 38, 38, 0.3);">
+                        <span class="program-tag" style="align-self: center; margin-bottom: 1.5rem;">Popular</span>
+                        <div class="pricing-title">Half-Day Visit</div>
+                        <div class="pricing-price">$900</div>
+                        <ul class="pricing-features">
+                            <li>Up to 2 presentations</li>
+                            <li>Choice of assemblies/workshops</li>
+                            <li>Book signing session</li>
+                            <li>Local travel included (&lt;50 mi)</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary">Book Half-Day</a>
+                    </div>
+
+                    <!-- Package 3 -->
+                    <div class="pricing-card">
+                        <div class="pricing-title">Full-Day Visit</div>
+                        <div class="pricing-price">$1,600</div>
+                        <ul class="pricing-features">
+                            <li>Up to 4 presentations</li>
+                            <li>Mix assemblies and workshops</li>
+                            <li>Dedicated book signing</li>
+                            <li>Local travel included (&lt;50 mi)</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary">Book Full-Day</a>
+                    </div>
+
+                    <!-- Package 4 -->
+                    <div class="pricing-card">
+                        <div class="pricing-title">Fly-In Visit</div>
+                        <div class="pricing-price">$2,500</div>
+                        <ul class="pricing-features">
+                            <li>Full-Day package rate</li>
+                            <li><strong>All travel costs covered</strong></li>
+                            <li>Flights, hotel, and food included</li>
+                            <li>No hidden travel invoices</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-secondary">Book Out-of-State</a>
+                    </div>
+                </div>
+
+                <div class="travel-info">
+                    🚗 <strong>Travel Expenses:</strong> For schools located more than 50 miles away from Doylestown, PA, driving travel expenses (gas) apply. For fly-in visits, the $2,500 rate is flat and all-inclusive of travel.
+                </div>
+            </div>
+
+            <!-- Booking CTA -->
+            <div style="text-align: center; margin-top: 6rem; padding: 4rem; background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-lg);" class="fade-in">
+                <h2>Reserve a Visit Date</h2>
+                <p style="max-width: 600px; margin: 0 auto 2rem auto;">Bookings fill up quickly for the school year. Reach out directly using the event request form or email.</p>
+                <a href="contact.html" class="btn btn-primary" style="margin-right: 1rem; margin-bottom: 1rem;">Request Event Date</a>
+                <a href="mailto:author.matthewlandis@gmail.com" class="btn btn-secondary" style="margin-bottom: 1rem;">Email: author.matthewlandis@gmail.com</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>Matthew Landis</h3>
+                <p style="max-width: 400px; margin-bottom: 1.5rem;">Middle-grade and young adult author helping readers discover that history, reading, and writing are anything but boring.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/matthew_landis/" class="social-icon" target="_blank" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+            <div class="footer-links-grid">
+                <div>
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="school-visits.html">School Visits</a></li>
+                        <li><a href="about.html">About & Bio</a></li>
+                        <li><a href="rv-tour.html">RV Tour</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Publisher Sites</h5>
+                    <ul>
+                        <li><a href="https://www.penguinrandomhouse.com" target="_blank">Penguin Random House</a></li>
+                        <li><a href="https://www.goodreads.com" target="_blank">Goodreads Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="copyright-year"></span> Matthew Landis. All rights reserved.</p>
+            <p>Designed with care &bull; Free from Squarespace fees</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

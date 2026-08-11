@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | Matthew Landis</title>
+    <meta name="description" content="Explore the action-packed middle-grade and YA books written by Matthew Landis, including Capitol Chase, Eternal Flame, and League of American Traitors.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .books-header {
+            text-align: center;
+            padding: 8rem 0 0.5rem 0;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.03) 0%, transparent 100%);
+        }
+        
+        .book-list-container {
+            padding-top: 1.5rem;
+            padding-bottom: 8rem;
+        }
+
+        .book-detail-row {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 4rem;
+            margin-bottom: 6rem;
+            padding: 3.5rem 3rem;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            transition: var(--transition-smooth);
+        }
+
+        .book-detail-row:hover {
+            border-color: rgba(220, 38, 38, 0.2);
+            background-color: var(--bg-card-hover);
+        }
+
+        .book-detail-cover {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .book-detail-cover .book-cover {
+            width: 280px;
+            height: 420px;
+            font-size: 1.15rem;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.18);
+        }
+
+        .book-metadata {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-tag {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .meta-tag.series {
+            background-color: rgba(212, 175, 55, 0.1);
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .purchase-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .purchase-links .btn {
+            font-size: 0.8rem;
+            padding: 0.65rem 1.25rem;
+        }
+
+        @media (max-width: 992px) {
+            .book-detail-row {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+            .book-detail-cover {
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">Matthew <span>Landis</span></a>
+            <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html" class="active">Books</a></li>
+                <li><a href="school-visits.html">School Visits</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rv-tour.html">RV Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="books-header">
+        <div class="container fade-in">
+            <h2>Books</h2>
+        </div>
+    </section>
+
+    <!-- Books List -->
+    <section class="book-list-container">
+        <div class="container">
+
+            <!-- Book 1: Capitol Chase -->
+            <div id="capitol-chase" class="book-detail-row fade-in">
+                <div class="book-detail-cover">
+                    <img class="book-cover" src="images/covers/capitol chase cover.webp" alt="Capitol Chase Book Cover">
+                </div>
+                <div class="book-content-details">
+                    <div class="book-metadata">
+                        <span class="meta-tag series">National Archive Hunters #1</span>
+                        <span class="meta-tag">Ages 8-12</span>
+                        <span class="meta-tag">Mystery & Adventure</span>
+                    </div>
+                    <h3>Capitol Chase</h3>
+                    <p>In this high-stakes series starter, twins Ike and Iris Carter—a history genius and an elite athlete, respectively—stumble upon a robbery at their mother's boutique museum in Washington, D.C. They discover a string of thefts targeting artifacts once gifted by the Marquis de Lafayette. As they race to track down the thief and clear their family's name, they find themselves pursued by the FBI's Art Crime team, who wrongly suspect the twins' involvement.</p>
+                    <div class="purchase-links">
+                        <a href="https://www.penguinrandomhouse.com/books/743826/national-archive-hunters-1-capitol-chase-by-matthew-landis/" target="_blank" class="btn btn-primary">Penguin Random House</a>
+                        <a href="https://bookshop.org/p/books/capitol-chase-matthew-landis/20703810" target="_blank" class="btn btn-secondary">Bookshop.org</a>
+                        <a href="https://www.amazon.com/National-Archive-Hunters-Capitol-Chase/dp/1645952231/ref=sr_1_2?crid=10C9A58EMUPPZ&dib=eyJ2IjoiMSJ9.cXS5M04yO2VFxkInqEKD9A.tKYCTpz5zQPHRLKTg9zavoCk1RpX-cc3nF4K43K0990&dib_tag=se&keywords=amazon+capitol+chase+matthew+landis&qid=1784547087&sprefix=amazon+capitol+chase+matthew+landi%2Caps%2C179&sr=8-2" target="_blank" class="btn btn-secondary">Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 2: Eternal Flame -->
+            <div id="eternal-flame" class="book-detail-row fade-in">
+                <div class="book-detail-cover">
+                    <img class="book-cover" src="images/covers/eternal flame cover.webp" alt="Eternal Flame Book Cover">
+                </div>
+                <div class="book-content-details">
+                    <div class="book-metadata">
+                        <span class="meta-tag series">National Archive Hunters #2</span>
+                        <span class="meta-tag">Ages 8-12</span>
+                        <span class="meta-tag">Mystery & Adventure</span>
+                    </div>
+                    <h3>Eternal Flame</h3>
+                    <p>Now acting as unofficial consultants for the FBI's Art Crimes Team, twins Ike and Iris Carter are called back to action. Pieces of the Statue of Liberty's original flame, packed away since 1916, have mysteriously vanished right before a high-profile Smithsonian gala. The chase leads them from Washington, D.C., to Paris and New York, following the blueprints of Gustave Eiffel to recover the missing pieces before international relations sour.</p>
+                    <div class="purchase-links">
+                        <a href="https://www.penguinrandomhouse.com/books/737330/eternal-flame-by-matthew-landis/" target="_blank" class="btn btn-primary">Penguin Random House</a>
+                        <a href="https://bookshop.org/p/books/eternal-flame-matthew-landis/21650393" target="_blank" class="btn btn-secondary">Bookshop.org</a>
+                        <a href="https://www.amazon.com/dp/0593652224" target="_blank" class="btn btn-secondary">Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 3: Operation Final Notice -->
+            <div id="operation-final-notice" class="book-detail-row fade-in">
+                <div class="book-detail-cover">
+                    <img class="book-cover" src="images/covers/Operation Final Notice Cover.webp" alt="Operation Final Notice Book Cover">
+                </div>
+                <div class="book-content-details">
+                    <div class="book-metadata">
+                        <span class="meta-tag">Middle-Grade</span>
+                        <span class="meta-tag">Ages 10-14</span>
+                        <span class="meta-tag">Contemporary Realism</span>
+                    </div>
+                    <h3>Operation Final Notice</h3>
+                    <p>Ronny's father was injured at work, leaving the family in deep financial trouble. When Ronny finds an unpaid car bill marked "FINAL NOTICE", he launches a secret plan to make $878 to save their family car from repossession. Meanwhile, his best friend Jo is a talented cellist who is terrified of performing solo. As Jo prepares for an audition at a prestigious music academy, the two best friends learn to rely on their community and each other to face their anxieties.</p>
+                    <div class="purchase-links">
+                        <a href="https://www.penguinrandomhouse.com/books/645934/operation-final-notice-by-matthew-landis/" target="_blank" class="btn btn-primary">Penguin Random House</a>
+                        <a href="https://bookshop.org/p/books/operation-final-notice-matthew-landis/17498453" target="_blank" class="btn btn-secondary">Bookshop.org</a>
+                        <a href="https://www.amazon.com/dp/0593116861" target="_blank" class="btn btn-secondary">Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 4: The Not-So-Boring Letters of Private Nobody -->
+            <div id="private-nobody" class="book-detail-row fade-in">
+                <div class="book-detail-cover">
+                    <img class="book-cover" src="images/covers/Private Nobody cover.webp" alt="The Not-So-Boring Letters of Private Nobody Book Cover">
+                </div>
+                <div class="book-content-details">
+                    <div class="book-metadata">
+                        <span class="meta-tag">Middle-Grade</span>
+                        <span class="meta-tag">Ages 10-14</span>
+                        <span class="meta-tag">Historical / Contemporary</span>
+                    </div>
+                    <h3>The Not-So-Boring Letters of Private Nobody</h3>
+                    <p>Seventh-grader Oliver Pritchard is a massive Civil War history fan. He gets paired with Ella Berry—a girl he thinks is a slacker—to research a local soldier, Private Raymond Stone, who died of disease without ever seeing a battle. Oliver thinks the project will be boring, but as they dig into the letters, Oliver and Ella uncover a massive secret in Stone's military record, finding an unexpected connection to the past and an unlikely friendship.</p>
+                    <div class="purchase-links">
+                        <a href="https://www.penguinrandomhouse.com/books/557602/the-not-so-boring-letters-of-private-nobody-by-matthew-landis/" target="_blank" class="btn btn-primary">Penguin Random House</a>
+                        <a href="https://bookshop.org/p/books/the-not-so-boring-letters-of-private-nobody-matthew-landis/8422770" target="_blank" class="btn btn-secondary">Bookshop.org</a>
+                        <a href="https://www.amazon.com/dp/0451478440" target="_blank" class="btn btn-secondary">Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 5: It's the End of the World as I Know It -->
+            <div id="end-of-world" class="book-detail-row fade-in">
+                <div class="book-detail-cover">
+                    <img class="book-cover" src="images/covers/End of the world cover.webp" alt="It's the End of the World as I Know It Book Cover">
+                </div>
+                <div class="book-content-details">
+                    <div class="book-metadata">
+                        <span class="meta-tag">Middle-Grade</span>
+                        <span class="meta-tag">Ages 10-14</span>
+                        <span class="meta-tag">Humor & Heart</span>
+                    </div>
+                    <h3>It's the End of the World as I Know It</h3>
+                    <p>Thirteen-year-old Derrick is convinced that a doomsday event is coming. Ever since his mother died serving in Iraq, Derrick prepares for the worst by hoarding food and building an elaborate fallout shelter in his backyard. But when a new friend, Misty, challenges his prepper lifestyle, and a real, local disaster hits, Derrick has to leave his bunker, discovering that dealing with the end of the world is less about canned goods and more about opening up to people.</p>
+                    <div class="purchase-links">
+                        <a href="https://www.penguinrandomhouse.com/books/598283/its-the-end-of-the-world-as-i-know-it-by-matthew-landis/" target="_blank" class="btn btn-primary">Penguin Random House</a>
+                        <a href="https://bookshop.org/p/books/it-s-the-end-of-the-world-as-i-know-it-matthew-landis/12108520" target="_blank" class="btn btn-secondary">Bookshop.org</a>
+                        <a href="https://www.amazon.com/dp/0451481239" target="_blank" class="btn btn-secondary">Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 6: The League of American Traitors -->
+            <div id="league-traitors" class="book-detail-row fade-in">
+                <div class="book-detail-cover">
+                    <img class="book-cover" src="images/covers/League of American Traitors Cover.webp" alt="The League of American Traitors Book Cover">
+                </div>
+                <div class="book-content-details">
+                    <div class="book-metadata">
+                        <span class="meta-tag">Young Adult</span>
+                        <span class="meta-tag">Ages 12+</span>
+                        <span class="meta-tag">Thriller & Mystery</span>
+                    </div>
+                    <h3>The League of American Traitors</h3>
+                    <p>Seventeen-year-old Jasper discovers at his father's funeral that he is the last living descendant of Benedict Arnold, the most famous traitor in American history. He is swept into a secret boarding school for descendants of historic traitors, discovering that his father's death was murder, and that he is caught in a multi-generational blood feud between the descendants of revolutionary patriots and traitors. Jasper has to clear Arnold's name before he turns 18, or pay the ultimate price.</p>
+                    <div class="purchase-links">
+                        <a href="https://www.penguinrandomhouse.com/books/553641/the-league-of-american-traitors-by-matthew-landis/" target="_blank" class="btn btn-primary">Penguin Random House</a>
+                        <a href="https://bookshop.org/p/books/the-league-of-american-traitors-matthew-landis/1149463" target="_blank" class="btn btn-secondary">Bookshop.org</a>
+                        <a href="https://www.amazon.com/dp/1510718873" target="_blank" class="btn btn-secondary">Amazon</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>Matthew Landis</h3>
+                <p style="max-width: 400px; margin-bottom: 1.5rem;">Middle-grade and young adult author helping readers discover that history, reading, and writing are anything but boring.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/matthew_landis/" class="social-icon" target="_blank" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+            <div class="footer-links-grid">
+                <div>
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="school-visits.html">School Visits</a></li>
+                        <li><a href="about.html">About & Bio</a></li>
+                        <li><a href="rv-tour.html">RV Tour</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Publisher Sites</h5>
+                    <ul>
+                        <li><a href="https://www.penguinrandomhouse.com" target="_blank">Penguin Random House</a></li>
+                        <li><a href="https://www.goodreads.com" target="_blank">Goodreads Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="copyright-year"></span> Matthew Landis. All rights reserved.</p>
+            <p>Designed with care &bull; Free from Squarespace fees</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
