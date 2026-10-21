@@ -1,0 +1,28 @@
+# Static site is published from the repo root (no build step).
+# The contract system uses one Netlify Function + Netlify Blobs for storage.
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  included_files = ["netlify/contracts-lib/assets/**"]
+
+# School-facing signing link: /contract/<id>
+[[redirects]]
+  from = "/contract/*"
+  to = "/contracts/sign.html"
+  status = 200
+
+# Keep the contract pages out of search engines
+[[headers]]
+  for = "/contracts/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+
+# Short admin address: /contracts
+[[redirects]]
+  from = "/contracts"
+  to = "/contracts/admin.html"
+  status = 301

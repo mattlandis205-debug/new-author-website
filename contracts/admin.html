@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Contracts | Matthew Landis</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/contracts.css">
+</head>
+<body class="contracts">
+  <header class="c-top">
+    <div class="c-wrap wide bar" style="padding-top:0;padding-bottom:0">
+      <a href="/index.html" class="logo">Matthew <span>Landis</span></a>
+      <div class="c-actions">
+        <span class="tag">School Contracts</span>
+        <button class="btn btn-secondary btn-sm hidden" id="logout">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="c-wrap wide">
+    <!-- Login -->
+    <form id="login" class="c-card hidden" style="max-width:420px;margin:3rem auto">
+      <h2>Contracts admin</h2>
+      <div id="login-error" class="c-error hidden"></div>
+      <div class="c-field">
+        <label for="pw">Password</label>
+        <input id="pw" type="password" autocomplete="current-password" required>
+      </div>
+      <button class="btn btn-primary" type="submit">Log in</button>
+    </form>
+
+    <div id="app" class="admin-grid hidden">
+      <!-- Left: list -->
+      <aside>
+        <div class="c-card" style="padding:1.25rem">
+          <div class="c-actions" style="justify-content:space-between;margin-bottom:.75rem">
+            <h2 style="margin:0">Contracts</h2>
+            <button class="btn btn-primary btn-sm" id="new-btn">+ New</button>
+          </div>
+          <div class="c-list" id="list"></div>
+          <p class="c-muted hidden" id="empty" style="margin:.75rem 0 0">No contracts yet. Click <strong>+ New</strong> to make your first one.</p>
+        </div>
+        <div class="c-card" style="padding:1.25rem">
+          <button class="btn btn-secondary btn-sm" id="settings-btn" style="width:100%">My invoice info</button>
+        </div>
+      </aside>
+
+      <!-- Right: editor / settings -->
+      <section style="padding:0">
+        <div id="welcome" class="c-card">
+          <h2>Welcome back</h2>
+          <p>Pick a contract on the left, or start a new one. Each contract gets its own private link you can text or email to the school. They read it, sign it, and download the PDF. You'll see the status change here: <span class="pill sent">Sent</span> <span class="pill viewed">Viewed</span> <span class="pill signed">Signed</span></p>
+        </div>
+
+        <form id="settings" class="c-card hidden">
+          <h2>My invoice info</h2>
+          <p class="c-muted">Shown in the "From" box on the invoice page of every contract. Stored privately on Netlify, not in your public GitHub code.</p>
+          <div class="c-grid">
+            <div class="c-field"><label for="s-name">Name</label><input id="s-name"></div>
+            <div class="c-field"><label for="s-phone">Phone</label><input id="s-phone"></div>
+          </div>
+          <div class="c-field"><label for="s-email">Email</label><input id="s-email" type="email"></div>
+          <div class="c-field"><label for="s-address">Mailing address</label><textarea id="s-address" style="min-height:70px"></textarea></div>
+          <button class="btn btn-primary" type="submit">Save</button>
+        </form>
+
+        <form id="editor" class="c-card hidden" autocomplete="off">
+          <div class="c-actions" style="justify-content:space-between;margin-bottom:.5rem">
+            <h2 style="margin:0" id="ed-heading">New contract</h2>
+            <span class="pill draft" id="ed-status">Draft</span>
+          </div>
+          <div class="timeline" id="ed-timeline"></div>
+          <div id="locked" class="c-ok hidden" style="margin-top:1rem"></div>
+          <div id="ed-error" class="c-error hidden" style="margin-top:1rem"></div>
+
+          <!-- Share box -->
+          <div id="share" class="hidden" style="margin:1.25rem 0;padding:1rem;border:1px dashed var(--accent-gold);border-radius:var(--radius-md);background:#fff7f7">
+            <label class="sig-label" for="share-url">SCHOOL'S LINK</label>
+            <div class="linkbox" style="margin:.4rem 0 .6rem">
+              <input id="share-url" class="c-input" readonly>
+              <button type="button" class="btn btn-primary btn-sm" id="copy-btn">Copy</button>
+            </div>
+            <div class="c-actions">
+              <a class="btn btn-secondary btn-sm" id="email-link" href="#">Email it</a>
+              <a class="btn btn-secondary btn-sm" id="text-link" href="#">Text it</a>
+            </div>
+          </div>
+
+          <fieldset id="fields" style="border:0;margin-top:1rem">
+            <div id="template-row" class="c-field">
+              <label for="template">Start from</label>
+              <div class="linkbox">
+                <select id="template"></select>
+                <button type="button" class="btn btn-secondary btn-sm" id="apply-template">Fill in</button>
+              </div>
+              <span class="hint">Fills in your usual wording. You can edit everything after.</span>
+            </div>
+
+            <h3>School</h3>
+            <div class="c-grid">
+              <div class="c-field"><label for="school">School name</label><input id="school" data-k="school" placeholder="Gayman Elementary"></div>
+              <div class="c-field"><label for="contactName">School contact</label><input id="contactName" data-k="contactName" placeholder="Hannah Thomas"></div>
+              <div class="c-field"><label for="contactEmail">Contact email / phone</label><input id="contactEmail" data-k="contactEmail" placeholder="for the Email it / Text it buttons"></div>
+            </div>
+            <div class="c-field"><label for="schoolAddress">School address <span class="hint">(for the invoice)</span></label><textarea id="schoolAddress" data-k="schoolAddress" style="min-height:64px"></textarea></div>
+
+            <h3>Visit</h3>
+            <div class="c-grid">
+              <div class="c-field"><label for="visitType">Type</label>
+                <select id="visitType" data-k="visitType"><option value="in-person">In person</option><option value="virtual">Virtual</option></select></div>
+              <div class="c-field"><label for="visitDate">Date</label><input id="visitDate" data-k="visitDate" placeholder="Friday, April 10th, 2026"></div>
+              <div class="c-field"><label for="visitTime">Time</label><input id="visitTime" data-k="visitTime" placeholder="12:30-3:30 PM"></div>
+              <div class="c-field"><label for="grades">Grades</label><input id="grades" data-k="grades" placeholder="4-6"></div>
+            </div>
+
+            <h3>Terms</h3>
+            <p class="c-muted" style="margin-bottom:.75rem">One item per line. Use <code>**bold**</code>, <code>[link text](https://…)</code>. <code>{grades}</code> and <code>{half_fee}</code> fill in automatically.</p>
+            <div class="c-field"><label for="authorBefore">Before the visit, Matt will:</label><textarea id="authorBefore" data-k="authorBefore"></textarea></div>
+            <div class="c-field"><label for="authorDay">The day of the visit, Matt will:</label><textarea id="authorDay" data-k="authorDay" style="min-height:160px"></textarea></div>
+            <div class="c-field"><label for="schoolBefore">Before the visit, the school will:</label><textarea id="schoolBefore" data-k="schoolBefore"></textarea></div>
+            <div class="c-field"><label for="schoolDay">The day of the visit, the school will: <span class="hint">(tech, room, etc.)</span></label><textarea id="schoolDay" data-k="schoolDay"></textarea></div>
+            <div class="c-field"><label for="additional">Additional details <span class="hint">(optional: book sales, parking, lunch…)</span></label><textarea id="additional" data-k="additional" style="min-height:70px"></textarea></div>
+            <div class="c-field"><label for="contingencyIntro">Contingency intro</label><textarea id="contingencyIntro" data-k="contingencyIntro" style="min-height:60px"></textarea></div>
+            <div class="c-field"><label for="contingency">Cancellation terms</label><textarea id="contingency" data-k="contingency"></textarea></div>
+
+            <h3>Fee / invoice</h3>
+            <div class="c-grid">
+              <div class="c-field"><label for="invoiceNumber">Invoice #</label><input id="invoiceNumber" data-k="invoiceNumber" placeholder="2026_GES"></div>
+              <div class="c-field"><label for="invoiceDue">Due</label><input id="invoiceDue" data-k="invoiceDue" placeholder="Upon day of visit"></div>
+            </div>
+            <div class="items-table" id="items"></div>
+            <div class="c-actions" style="justify-content:space-between;margin-bottom:1rem">
+              <button type="button" class="btn btn-secondary btn-sm" id="add-item">+ Line item</button>
+              <strong id="items-total" style="font-family:var(--font-title);color:var(--accent-gold);font-size:1.15rem"></strong>
+            </div>
+            <div class="c-field"><label for="invoiceNotes">Invoice notes <span class="hint">(e.g. "Aiming to start at 1:30pm")</span></label><textarea id="invoiceNotes" data-k="invoiceNotes" style="min-height:60px"></textarea></div>
+
+            <div class="c-field"><label for="privateNotes">Private notes <span class="hint">(only you see these)</span></label><textarea id="privateNotes" data-k="privateNotes" style="min-height:60px"></textarea></div>
+          </fieldset>
+
+          <div class="sticky-actions c-actions">
+            <button type="submit" class="btn btn-primary btn-sm" id="save-btn">Save</button>
+            <button type="button" class="btn btn-primary btn-sm" id="send-btn">Get school link</button>
+            <a class="btn btn-secondary btn-sm" id="preview-btn" href="#" target="_blank">Preview</a>
+            <a class="btn btn-secondary btn-sm" id="pdf-btn" href="#" target="_blank">PDF</a>
+            <button type="button" class="btn btn-secondary btn-sm" id="dup-btn">Duplicate</button>
+            <button type="button" class="btn btn-secondary btn-sm" id="del-btn" style="margin-left:auto">Delete</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="/js/contracts-admin.js"></script>
+</body>
+</html>

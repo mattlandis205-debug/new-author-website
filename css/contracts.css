@@ -1,0 +1,109 @@
+/* Contract pages — builds on css/style.css variables (red accent, Outfit + Inter). */
+body.contracts { background: var(--bg-secondary); }
+.c-top {
+  background: #fff; border-bottom: 1px solid var(--border-color);
+  position: sticky; top: 0; z-index: 50;
+}
+.c-top .bar { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 1rem; }
+.c-top .logo { font-size: 1.15rem; }
+.c-top .tag { font-family: var(--font-title); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); }
+.c-wrap { width: 100%; max-width: 860px; margin: 0 auto; padding: 2rem 16px 5rem; }
+.c-wrap.wide { max-width: 1180px; }
+.c-card {
+  background: #fff; border: 1px solid var(--border-color); border-radius: var(--radius-md);
+  box-shadow: var(--shadow-premium); padding: 2rem; margin-bottom: 1.5rem;
+}
+.c-card h2 { font-size: 1.35rem; margin-bottom: 1rem; }
+.c-card h2::after { width: 36px; height: 3px; margin-top: .35rem; }
+.c-card h3 { font-size: 1rem; margin: 1.25rem 0 .5rem; }
+.c-card p { margin-bottom: 1rem; }
+.c-muted { color: var(--text-muted); font-size: .9rem; }
+.c-banner { width: 100%; aspect-ratio: 2.8/1; object-fit: cover; border-radius: var(--radius-md) var(--radius-md) 0 0; display: block; }
+.c-doc { padding: 0; overflow: hidden; }
+.c-doc .inner { padding: 2rem 2.25rem 2.25rem; }
+.c-doc h1 { font-size: clamp(1.6rem, 4.5vw, 2.3rem); margin-bottom: .25rem; }
+.c-doc .byline { font-family: var(--font-title); color: var(--text-muted); font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1.25rem; }
+.c-doc .intro { font-style: italic; color: var(--text-primary); font-size: 1.05rem; }
+.c-doc section { padding: 0; border-top: 1px solid var(--border-color); margin-top: 1.5rem; padding-top: 1.25rem; }
+.c-doc ul { list-style: none; margin: 0 0 .5rem; }
+.c-doc li { position: relative; padding-left: 1.2rem; margin-bottom: .55rem; color: var(--text-secondary); line-height: 1.55; }
+.c-doc li::before { content: ''; position: absolute; left: .2rem; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-gold); }
+.c-doc a { text-decoration: underline; }
+.c-fee { width: 100%; border-collapse: collapse; margin: .5rem 0 1rem; font-size: .95rem; }
+.c-fee th { text-align: left; font-family: var(--font-title); font-weight: 600; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); padding: .5rem .25rem; border-bottom: 1px solid var(--border-color); }
+.c-fee td { padding: .65rem .25rem; border-bottom: 1px solid var(--border-color); vertical-align: top; color: var(--text-primary); }
+.c-fee .num { text-align: right; white-space: nowrap; }
+.c-fee tfoot td { border: 0; font-weight: 700; font-size: 1.1rem; }
+.c-fee tfoot .num { color: var(--accent-gold); }
+
+/* Forms */
+.c-field { display: flex; flex-direction: column; gap: .35rem; margin-bottom: 1rem; min-width: 0; }
+.c-field label { font-family: var(--font-title); font-weight: 600; font-size: .82rem; letter-spacing: .04em; color: var(--text-primary); }
+.c-field .hint { font-size: .78rem; color: var(--text-muted); }
+.c-input, .c-field input, .c-field textarea, .c-field select {
+  width: 100%; font: inherit; font-size: 16px; color: var(--text-primary); background: #fff;
+  border: 1px solid #cbd5e1; border-radius: var(--radius-sm); padding: .6rem .75rem; transition: border-color .15s, box-shadow .15s;
+}
+.c-field textarea { min-height: 110px; resize: vertical; line-height: 1.45; font-size: 14px; }
+.c-field input:focus, .c-field textarea:focus, .c-field select:focus { outline: none; border-color: var(--accent-gold); box-shadow: 0 0 0 3px rgba(220, 38, 38, .12); }
+.c-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 1rem; }
+.c-check { display: flex; gap: .7rem; align-items: flex-start; font-size: .95rem; color: var(--text-primary); margin: .5rem 0 1.25rem; cursor: pointer; }
+.c-check input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent-gold); flex: none; }
+.btn-sm { padding: .55rem 1rem; font-size: .78rem; }
+.btn[disabled] { opacity: .5; pointer-events: none; }
+.c-actions { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.c-error { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; border-radius: var(--radius-sm); padding: .75rem 1rem; margin-bottom: 1rem; font-size: .92rem; }
+.c-ok { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.c-ok strong { color: #14532d; }
+.hidden { display: none !important; }
+
+/* Status pills */
+.pill { display: inline-flex; align-items: center; gap: .35rem; font-family: var(--font-title); font-size: .72rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: .2rem .6rem; border-radius: 999px; border: 1px solid; white-space: nowrap; }
+.pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.pill.draft { color: #64748b; border-color: #e2e8f0; background: #f8fafc; }
+.pill.sent { color: #b45309; border-color: #fde68a; background: #fffbeb; }
+.pill.viewed { color: #1d4ed8; border-color: #bfdbfe; background: #eff6ff; }
+.pill.signed { color: #15803d; border-color: #bbf7d0; background: #f0fdf4; }
+
+/* Signature block */
+.sig-name { font-family: 'Spectral', Georgia, serif; font-style: italic; font-size: 1.8rem; color: var(--text-primary); border-bottom: 1px solid var(--text-primary); padding: .2rem 0; min-height: 3rem; overflow-wrap: anywhere; }
+.sig-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+.sig-label { font-family: var(--font-title); font-size: .72rem; letter-spacing: .12em; color: var(--text-muted); font-weight: 600; }
+.sig-meta { font-size: .82rem; color: var(--text-muted); margin-top: .35rem; }
+
+/* Admin list */
+.c-list { display: flex; flex-direction: column; }
+.c-row { display: grid; grid-template-columns: 1fr auto; gap: .25rem 1rem; padding: .9rem .25rem; border-bottom: 1px solid var(--border-color); cursor: pointer; align-items: center; }
+.c-row:hover { background: var(--bg-secondary); }
+.c-row .school { font-family: var(--font-title); font-weight: 600; color: var(--text-primary); }
+.c-row .meta { font-size: .82rem; color: var(--text-muted); grid-column: 1 / 2; }
+.c-row .pill { grid-row: 1 / span 2; grid-column: 2; }
+.c-row.active { background: #fef2f2; }
+.admin-grid { display: grid; grid-template-columns: 320px 1fr; gap: 1.5rem; align-items: start; }
+.admin-grid > * { min-width: 0; }
+.items-table { display: flex; flex-direction: column; gap: .5rem; margin-bottom: .75rem; }
+.item-row { display: grid; grid-template-columns: 1fr 70px 110px 36px; gap: .5rem; align-items: center; }
+.item-row .rm { background: none; border: 1px solid var(--border-color); border-radius: var(--radius-sm); height: 40px; cursor: pointer; color: var(--text-muted); font-size: 1.1rem; }
+.linkbox { display: flex; gap: .5rem; }
+.linkbox input { flex: 1; min-width: 0; font-size: 14px; }
+.timeline { font-size: .85rem; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin-top: .5rem; }
+.toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--text-primary); color: #fff; padding: .7rem 1.2rem; border-radius: 999px; font-size: .9rem; z-index: 200; box-shadow: var(--shadow-hover); }
+.sticky-actions { position: sticky; bottom: 0; background: rgba(255,255,255,.95); backdrop-filter: blur(6px); border-top: 1px solid var(--border-color); padding: .9rem 0; margin: 0 -2rem -2rem; padding-left: 2rem; padding-right: 2rem; border-radius: 0 0 var(--radius-md) var(--radius-md); }
+
+@media (max-width: 860px) {
+  .admin-grid { grid-template-columns: 1fr; }
+  .c-card { padding: 1.25rem; }
+  .c-doc .inner { padding: 1.25rem; }
+  .sticky-actions { margin: 0 -1.25rem -1.25rem; padding-left: 1.25rem; padding-right: 1.25rem; }
+  .item-row { grid-template-columns: 1fr 56px 90px 36px; }
+}
+@media print {
+  .c-top, .no-print { display: none !important; }
+  body.contracts { background: #fff; }
+}
+.c-card.c-doc { padding: 0; }
+.c-top .logo { white-space: nowrap; }
+@media (max-width: 560px) {
+  .c-top .tag { display: none; }
+  .c-wrap { padding-top: 1rem; }
+}

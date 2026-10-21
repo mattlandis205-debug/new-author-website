@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Author Visit Contract | Matthew Landis</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/contracts.css">
+</head>
+<body class="contracts">
+  <header class="c-top">
+    <div class="c-wrap bar" style="padding-top:0;padding-bottom:0">
+      <a href="/index.html" class="logo">Matthew <span>Landis</span></a>
+      <span class="tag">Author Visit Contract</span>
+    </div>
+  </header>
+
+  <main class="c-wrap">
+    <div id="loading" class="c-card"><p class="c-muted" style="margin:0">Loading your contract…</p></div>
+    <div id="notfound" class="c-card hidden">
+      <h2>Contract not found</h2>
+      <p>This link isn't active. Please double-check the link Matt sent you, or reach out to him directly.</p>
+    </div>
+
+    <div id="doc" class="hidden">
+      <div id="signed-banner" class="c-ok hidden no-print"></div>
+
+      <article class="c-card c-doc">
+        <img class="c-banner" src="/images/author/contract-banner.jpg" alt="Matthew Landis with a crowd of cheering students at a school visit">
+        <div class="inner">
+          <h1 id="title"></h1>
+          <div class="byline">Matthew Landis &middot; Author Visits &amp; Writing Workshops</div>
+          <p class="intro" id="intro"></p>
+
+          <section>
+            <h2>Author's Responsibility</h2>
+            <h3>Before the visit, Matt will:</h3><ul id="authorBefore"></ul>
+            <h3>The day of the visit, Matt will:</h3><ul id="authorDay"></ul>
+          </section>
+          <section>
+            <h2>School's Responsibility</h2>
+            <h3>Before the visit, the school will:</h3><ul id="schoolBefore"></ul>
+            <h3>The day of the visit, the school will:</h3><ul id="schoolDay"></ul>
+          </section>
+          <section id="additional-wrap" class="hidden">
+            <h2>Additional Details</h2><ul id="additional"></ul>
+          </section>
+          <section>
+            <h2>Contingency</h2>
+            <p id="contingencyIntro"></p><ul id="contingency"></ul>
+          </section>
+          <section>
+            <h2>Visit Fee</h2>
+            <table class="c-fee">
+              <thead><tr><th>Description</th><th class="num">Qty</th><th class="num">Unit</th><th class="num">Total</th></tr></thead>
+              <tbody id="fee-rows"></tbody>
+              <tfoot><tr><td colspan="3">Total</td><td class="num" id="fee-total"></td></tr></tfoot>
+            </table>
+            <p class="c-muted" id="fee-due"></p>
+          </section>
+          <section>
+            <h2>Signatures</h2>
+            <div class="sig-grid">
+              <div>
+                <div class="sig-label">AUTHOR</div>
+                <div class="sig-name" id="author-sig"></div>
+                <div class="sig-meta" id="author-meta"></div>
+              </div>
+              <div>
+                <div class="sig-label">SCHOOL REPRESENTATIVE</div>
+                <div class="sig-name" id="school-sig"></div>
+                <div class="sig-meta" id="school-meta"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <form id="sign-form" class="c-card no-print" novalidate>
+        <h2>Sign the contract</h2>
+        <p class="c-muted">Type your name to sign electronically. You'll be able to download a PDF copy right after.</p>
+        <div id="sign-error" class="c-error hidden" role="alert"></div>
+        <div class="c-grid">
+          <div class="c-field">
+            <label for="sig-name">Full name</label>
+            <input id="sig-name" autocomplete="name" required maxlength="120" placeholder="e.g. Hannah Thomas">
+          </div>
+          <div class="c-field">
+            <label for="sig-title">Title / role</label>
+            <input id="sig-title" autocomplete="organization-title" maxlength="120" placeholder="e.g. Librarian">
+          </div>
+        </div>
+        <label class="c-check">
+          <input type="checkbox" id="sig-agree">
+          <span>I have read this contract and agree to its terms on behalf of <strong id="agree-school"></strong>. I understand that typing my name here is my electronic signature.</span>
+        </label>
+        <div class="c-actions">
+          <button class="btn btn-primary" type="submit" id="sign-btn">Sign contract</button>
+          <a class="btn btn-secondary" id="pdf-link-unsigned" href="#">Download PDF</a>
+        </div>
+      </form>
+
+      <div id="after" class="c-card no-print hidden">
+        <h2>All set!</h2>
+        <p>Thanks for signing. Save a copy for your records:</p>
+        <div class="c-actions">
+          <a class="btn btn-primary" id="pdf-link" href="#">Download signed PDF</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/js/contracts-sign.js"></script>
+</body>
+</html>
