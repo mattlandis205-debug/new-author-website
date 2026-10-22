@@ -10,6 +10,8 @@
 //   POST   /api/contracts/:id/duplicate   copy (e.g. to change a signed contract)
 //   GET    /api/contracts/settings        Matt's invoice info
 //   PUT    /api/contracts/settings
+// Read-only status feed:
+//   GET    /api/contracts/status?key=<CONTRACTS_STATUS_KEY>
 // Public routes (the long random id is the key to the contract):
 //   GET    /api/contracts/public/:id          view (marks "viewed" unless ?preview=1)
 //   POST   /api/contracts/public/:id/sign     sign  {name, title, agree:true}
@@ -86,6 +88,25 @@ export default async (req, context) => {
   const s = store();
 
   try {
+    // ---------------- Read-only status feed (for checking from Claude) ----------------
+    // GET /api/contracts/status?key=<CONTRACTS_STATUS_KEY>  -> school, status, dates only. No terms, fees or notes.
+    if (parts[0] === 'status' && method === 'GET') {
+      const want = process.env.CONTRACTS_STATUS_KEY;
+      if (!want) return err('Status feed not set up. Add CONTRACTS_STATUS_KEY in Netlify environment variables.', 500);
+      if (!timingSafeEqual(sha(url.searchParams.get('key') || ''), sha(want))) return err('Not found', 404);
+      const { blobs } = await s.list({ prefix: 'contract/' });
+      const all = (await Promise.all(blobs.map(b => s.get(b.key, { type: 'json' })))).filter(Boolean);
+      all.sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''));
+      return json({
+        checkedAt: new Date().toISOString(),
+        contracts: all.map(c => ({
+          school: c.school || '', contact: c.contactName || '', visitDate: c.visitDate || '',
+          status: c.status, sentAt: c.sentAt || null, viewedAt: c.viewedAt || null, signedAt: c.signedAt || null,
+          signedBy: c.signature ? [c.signature.name, c.signature.title].filter(Boolean).join(', ') : null
+        }))
+      });
+    }
+
     // ---------------- Public ----------------
     if (parts[0] === 'public') {
       const id = parts[1];
