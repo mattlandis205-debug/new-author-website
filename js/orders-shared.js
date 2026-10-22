@@ -30,6 +30,12 @@ export const BOOKS = [
     format: 'Paperback', price: 10, grades: 'Grades 4-8', cover: '/images/covers/Operation Final Notice Cover.webp',
     awards: ['Nominated: Washington State Sasquatch Award'],
     blurb: 'Ronny has four weeks to save the family car from repossession. His best friend Jo has the same four weeks to beat stage fright and nail a cello audition.'
+  },
+  {
+    id: 'league', title: 'The League of American Traitors', short: 'League of American Traitors',
+    format: 'Hardback', price: 15, grades: 'Grades 7+ (YA)', cover: '/images/covers/League of American Traitors Cover.webp',
+    awards: [],
+    blurb: "At his father's funeral, seventeen-year-old Jasper learns he's the last living descendant of Benedict Arnold, and he's swept into a secret society of traitors' descendants where he must clear Arnold's name or pay the ultimate price."
   }
 ];
 
