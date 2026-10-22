@@ -21,6 +21,7 @@ function renderBooks() {
       <div>
         <h3>${escapeHtml(b.title)}</h3>
         <div class="meta">${escapeHtml(b.format)} · ${escapeHtml(b.grades)}</div>
+        ${(b.awards || []).length ? `<div class="awards">${b.awards.map(a => `<span class="award">${escapeHtml(a)}</span>`).join('')}</div>` : ''}
         <p class="blurb">${escapeHtml(b.blurb)}</p>
         <div class="row">
           <span class="price">${fmt(b.price)}</span>
