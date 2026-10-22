@@ -97,12 +97,19 @@ export default async (req, context) => {
       const { blobs } = await s.list({ prefix: 'contract/' });
       const all = (await Promise.all(blobs.map(b => s.get(b.key, { type: 'json' })))).filter(Boolean);
       all.sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''));
+      const paidCounts = {};
+      const { blobs: orderBlobs } = await s.list({ prefix: 'order/' });
+      await Promise.all(orderBlobs.map(async b => {
+        const o = await s.get(b.key, { type: 'json' });
+        if (o?.status === 'paid') paidCounts[o.contractId] = (paidCounts[o.contractId] || 0) + 1;
+      }));
       return json({
         checkedAt: new Date().toISOString(),
         contracts: all.map(c => ({
           school: c.school || '', contact: c.contactName || '', visitDate: c.visitDate || '',
           status: c.status, sentAt: c.sentAt || null, viewedAt: c.viewedAt || null, signedAt: c.signedAt || null,
-          signedBy: c.signature ? [c.signature.name, c.signature.title].filter(Boolean).join(', ') : null
+          signedBy: c.signature ? [c.signature.name, c.signature.title].filter(Boolean).join(', ') : null,
+          paidBookOrders: paidCounts[c.id] || 0
         }))
       });
     }

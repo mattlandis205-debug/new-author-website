@@ -92,6 +92,12 @@ const FIELDS = [...document.querySelectorAll('#editor [data-k]')];
 
 function showPanel(which) {
   ['welcome', 'settings', 'editor'].forEach(p => $(p).classList.toggle('hidden', p !== which));
+  if (which !== 'editor') announce(null);
+}
+
+// Lets the book-orders panel (orders-admin.js) follow which contract is open.
+function announce(c) {
+  document.dispatchEvent(new CustomEvent('contract:state', { detail: { contract: c, password } }));
 }
 
 function fillForm(c) {
@@ -180,6 +186,7 @@ function setEditorState(c) {
     $('locked').innerHTML = `<strong>Signed by ${escapeHtml(s.name)}${s.title ? ', ' + escapeHtml(s.title) : ''}</strong> on ${escapeHtml(fmtDateTime(s.signedAt))}. This contract is locked. Use <em>Duplicate</em> if anything needs to change.`;
   }
   $('ed-error').classList.add('hidden');
+  announce(c);
 
   if (c) {
     const link = `${location.origin}/contract/${c.id}`;

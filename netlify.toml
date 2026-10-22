@@ -14,6 +14,12 @@
   to = "/contracts/sign.html"
   status = 200
 
+# Parent-facing book order page: /order/<school>
+[[redirects]]
+  from = "/order/*"
+  to = "/orders/order.html"
+  status = 200
+
 # Keep the contract pages out of search engines
 [[headers]]
   for = "/contracts/*"
@@ -26,3 +32,9 @@
   from = "/contracts"
   to = "/contracts/admin.html"
   status = 301
+
+[[headers]]
+  for = "/orders/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"

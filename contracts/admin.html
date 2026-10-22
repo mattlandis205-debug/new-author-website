@@ -149,10 +149,55 @@
             <button type="button" class="btn btn-secondary btn-sm" id="del-btn" style="margin-left:auto">Delete</button>
           </div>
         </form>
+
+        <!-- Book orders for this visit -->
+        <div id="orders-card" class="c-card hidden">
+          <div class="c-actions" style="justify-content:space-between;margin-bottom:.5rem">
+            <h2 style="margin:0">Signed book orders</h2>
+            <span class="pill draft" id="o-pill">Off</span>
+          </div>
+          <div id="o-setup" class="c-error hidden"></div>
+          <div id="o-error" class="c-error hidden"></div>
+
+          <label class="c-check" style="margin-bottom:.75rem"><input type="checkbox" id="o-enabled"> <span>Turn on an order page for this school</span></label>
+          <div id="o-settings">
+            <div class="c-field">
+              <label for="o-slug">Web address</label>
+              <div class="linkbox"><span class="c-muted" style="align-self:center;white-space:nowrap">/order/</span><input id="o-slug" class="c-input" placeholder="groveland"></div>
+            </div>
+            <label class="c-check" style="margin:.25rem 0 1rem"><input type="checkbox" id="o-open" checked> <span>Open for orders (uncheck to close ordering after your deadline)</span></label>
+            <div class="c-field"><label for="o-message">Note to parents <span class="hint">(optional: deadline, pickup info…)</span></label><textarea id="o-message" style="min-height:60px" placeholder="Orders close Friday, April 3!"></textarea></div>
+            <h3>Books &amp; prices for this school</h3>
+            <div id="o-prices" class="items-table"></div>
+            <div class="c-actions" style="margin-bottom:1rem">
+              <button type="button" class="btn btn-primary btn-sm" id="o-save">Save order page</button>
+            </div>
+            <div id="o-share" class="hidden" style="margin:0 0 1.25rem;padding:1rem;border:1px dashed var(--accent-gold);border-radius:var(--radius-md);background:#fff7f7">
+              <label class="sig-label" for="o-url">ORDER PAGE LINK (for flyers &amp; emails)</label>
+              <div class="linkbox" style="margin:.4rem 0 0">
+                <input id="o-url" class="c-input" readonly>
+                <button type="button" class="btn btn-primary btn-sm" id="o-copy">Copy</button>
+                <a class="btn btn-secondary btn-sm" id="o-open-link" href="#" target="_blank">Open</a>
+              </div>
+            </div>
+          </div>
+
+          <div id="o-results" class="hidden">
+            <h3>Orders</h3>
+            <div class="c-grid" id="o-stats" style="margin-bottom:.75rem"></div>
+            <div class="c-actions" style="margin-bottom:1rem">
+              <button type="button" class="btn btn-secondary btn-sm" id="o-sync">Refresh</button>
+              <button type="button" class="btn btn-secondary btn-sm" id="o-csv">Download spreadsheet</button>
+              <button type="button" class="btn btn-secondary btn-sm" id="o-print">Print signing list</button>
+            </div>
+            <div style="overflow-x:auto"><table class="c-fee" id="o-table"></table></div>
+          </div>
+        </div>
       </section>
     </div>
   </main>
 
   <script type="module" src="/js/contracts-admin.js"></script>
+  <script type="module" src="/js/orders-admin.js"></script>
 </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Order Signed Books | Matthew Landis</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/contracts.css">
+  <style>
+    .o-hero { text-align: left; }
+    .o-hero h1 { font-size: clamp(1.6rem, 5vw, 2.4rem); margin-bottom: .35rem; }
+    .o-hero .kicker { font-family: var(--font-title); color: var(--accent-gold); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; margin-bottom: .5rem; }
+    .books { display: grid; gap: 1rem; }
+    .book { display: grid; grid-template-columns: 92px 1fr; gap: 1rem; padding: 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: #fff; transition: border-color .15s, box-shadow .15s; }
+    .book.has-qty { border-color: var(--accent-gold); box-shadow: 0 0 0 3px rgba(220,38,38,.08); }
+    .book img { width: 92px; aspect-ratio: 2/3; object-fit: cover; border-radius: 4px; box-shadow: 0 4px 12px rgba(15,23,42,.15); }
+    .book h3 { font-size: 1.02rem; margin: 0 0 .15rem; line-height: 1.25; }
+    .book .meta { font-size: .78rem; color: var(--text-muted); font-family: var(--font-title); letter-spacing: .04em; text-transform: uppercase; margin-bottom: .4rem; }
+    .book .blurb { font-size: .88rem; line-height: 1.45; margin: 0 0 .65rem; color: var(--text-secondary); }
+    .book .row { display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+    .price { font-family: var(--font-title); font-weight: 800; font-size: 1.3rem; color: var(--accent-gold); }
+    .stepper { display: inline-flex; align-items: center; border: 1px solid #cbd5e1; border-radius: 999px; overflow: hidden; }
+    .stepper button { width: 44px; height: 44px; border: 0; background: #fff; font-size: 1.3rem; cursor: pointer; color: var(--text-primary); }
+    .stepper button:active { background: var(--bg-secondary); }
+    .stepper output { min-width: 34px; text-align: center; font-weight: 700; font-family: var(--font-title); color: var(--text-primary); }
+    .radio-group { display: flex; flex-direction: column; gap: .4rem; margin-top: .25rem; }
+    .radio-group label { display: flex; gap: .6rem; align-items: flex-start; font-family: var(--font-sans); font-weight: 400; font-size: .95rem; letter-spacing: 0; cursor: pointer; }
+    .radio-group input { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--accent-gold); flex: none; }
+    .q { font-weight: 600 !important; font-family: var(--font-title); font-size: .9rem !important; line-height: 1.4; }
+    .paybar { position: sticky; bottom: 0; z-index: 40; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-top: 1px solid var(--border-color); padding: .85rem 16px calc(.85rem + env(safe-area-inset-bottom)); }
+    .paybar .inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .paybar .tot { font-family: var(--font-title); font-weight: 800; font-size: 1.35rem; color: var(--text-primary); }
+    .paybar .tot small { display: block; font-size: .72rem; font-weight: 500; color: var(--text-muted); letter-spacing: .04em; }
+    .secure { font-size: .8rem; color: var(--text-muted); margin-top: .75rem; }
+  </style>
+</head>
+<body class="contracts">
+  <header class="c-top">
+    <div class="c-wrap bar" style="padding-top:0;padding-bottom:0">
+      <a href="/index.html" class="logo">Matthew <span>Landis</span></a>
+      <span class="tag">Signed Book Orders</span>
+    </div>
+  </header>
+
+  <main class="c-wrap">
+    <div id="loading" class="c-card"><p class="c-muted" style="margin:0">Loading…</p></div>
+    <div id="notfound" class="c-card hidden"><h2>Page not found</h2><p>This order page isn't active. Double-check the link from your school, or reach out to Matt.</p></div>
+
+    <!-- Thank-you -->
+    <div id="thanks" class="c-card hidden">
+      <h2>You're all set! 🎉</h2>
+      <p id="thanks-text"></p>
+      <ul id="thanks-items" style="margin:0 0 1rem 1.2rem"></ul>
+      <p class="c-muted" id="thanks-email"></p>
+      <a class="btn btn-secondary btn-sm" id="again" href="#">Order for another kid</a>
+    </div>
+
+    <div id="page" class="hidden">
+      <article class="c-card c-doc">
+        <img class="c-banner" src="/images/author/contract-banner.jpg" alt="Matthew Landis with a crowd of cheering students">
+        <div class="inner o-hero">
+          <div class="kicker">Author visit</div>
+          <h1 id="school"></h1>
+          <p id="intro" style="margin-bottom:.5rem"></p>
+          <p id="message" class="hidden" style="margin:0"></p>
+        </div>
+      </article>
+
+      <div id="closed" class="c-error hidden">Orders for this visit are closed. Want a signed book anyway? Reach out to Matt through <a href="/contact.html">his website</a>.</div>
+      <div id="canceled" class="c-error hidden">Checkout was canceled, so nothing was charged. Your picks are still here if you want to try again.</div>
+
+      <form id="form" class="hidden" novalidate>
+        <section class="c-card">
+          <h2>Pick your books</h2>
+          <p class="c-muted">Every book is signed by Matt and delivered to school on visit day.</p>
+          <div class="books" id="books"></div>
+        </section>
+
+        <section class="c-card">
+          <h2>Your info</h2>
+          <div class="c-grid">
+            <div class="c-field"><label for="parentName">Parent FULL name</label><input id="parentName" autocomplete="name" required maxlength="120"></div>
+            <div class="c-field"><label for="email">Email address</label><input id="email" type="email" autocomplete="email" required maxlength="200"></div>
+          </div>
+          <div class="c-field"><label for="childName">Child's first name</label><input id="childName" required maxlength="200" placeholder="Who should Matt sign it to?"></div>
+
+          <div class="c-field">
+            <span class="q" id="camp-q"></span>
+            <div class="radio-group" role="radiogroup" aria-labelledby="camp-q">
+              <label><input type="radio" name="camp" value="yes"> <span id="camp-yes"></span></label>
+              <label><input type="radio" name="camp" value="no" checked> <span id="camp-no"></span></label>
+            </div>
+          </div>
+          <div class="c-field">
+            <span class="q" id="pod-q"></span>
+            <div class="radio-group" role="radiogroup" aria-labelledby="pod-q">
+              <label><input type="radio" name="podcast" value="yes"> <span id="pod-yes"></span></label>
+              <label><input type="radio" name="podcast" value="no" checked> <span id="pod-no"></span></label>
+            </div>
+          </div>
+          <div id="error" class="c-error hidden" role="alert"></div>
+          <p class="secure">You'll pay on Stripe's secure checkout page. Card details never touch this website.</p>
+        </section>
+      </form>
+    </div>
+  </main>
+
+  <div class="paybar hidden" id="paybar">
+    <div class="inner">
+      <div class="tot"><span id="total">$0</span><small id="count">No books yet</small></div>
+      <button class="btn btn-primary" id="pay" type="button" disabled>Checkout</button>
+    </div>
+  </div>
+
+  <script type="module" src="/js/order-page.js"></script>
+</body>
+</html>
